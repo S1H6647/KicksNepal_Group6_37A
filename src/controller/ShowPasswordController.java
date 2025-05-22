@@ -8,6 +8,6 @@ package controller;
  *
  * @author sanji
  */
-public class SignUp {
+public class ShowPasswordController {
     
 }

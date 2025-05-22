@@ -1,5 +1,6 @@
 # NetBeans user-specific configuration
 nbproject/private/
+out/*
 
 # Build and distribution folders
 build/
