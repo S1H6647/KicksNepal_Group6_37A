@@ -6,21 +6,22 @@ package controller;
 
 import dao.UserDao;
 import java.awt.HeadlessException;
-import model.User;
-import view.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
+import javax.swing.JOptionPane;
+import model.User;
+import view.LandingScreen;
+import view.SignUpScreen;
 
 /**
  *
  * @author sanji
  */
-public class SignUpScreenController {
+public class LoginScreenController {
     private final UserDao userDao = new UserDao();
     private final SignUpScreen signUpScreen;
 
-    public SignUpScreenController(SignUpScreen signUpScreen){
+    public LoginScreenController(SignUpScreen signUpScreen){
         this.signUpScreen = signUpScreen;
         
         signUpScreen.addSubmitListener(new SubmitListener());
@@ -41,16 +42,15 @@ public class SignUpScreenController {
         @Override
         public void actionPerformed(ActionEvent ae){
             try {
-                String name = signUpScreen.getNameField().getText();
                 String email = signUpScreen.getEmailField().getText();
                 String password = new String(signUpScreen.getPasswordField().getPassword());
                 
-                if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                if (email.isEmpty() || password.isEmpty()) {
                     JOptionPane.showMessageDialog(signUpScreen, "All fields must be filled.");
                             return;
                 }
                 
-                User user = new User(name,email,password);
+                User user = new User(email,password);
                 boolean exists = userDao.checkUser(user);
 
                 if (exists){
