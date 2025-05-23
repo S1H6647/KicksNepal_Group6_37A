@@ -16,15 +16,15 @@ import java.sql.Connection;
  * @author sanji
  */
 public class UserDao {
-
     public void signup(User user){
-    MySqlConnection mysql = new MySqlConnection();
-    Connection connection = mysql.openConnection();
-        String sql = "INSERT INTO users (username, email, password) VALUES (?,?,?)";
+        MySqlConnection mysql = new MySqlConnection();
+        Connection connection = mysql.openConnection();
+        String sql = "INSERT INTO users (username, phoneNum, email, password) VALUES (?,?,?,?)";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setString(1, user.getUsername());
-            pstmt.setString(2, user.getEmail());
-            pstmt.setString(3, user.getPassword());
+            pstmt.setString(2, user.getPhoneNum());
+            pstmt.setString(3, user.getEmail());
+            pstmt.setString(4, user.getPassword());
             pstmt.executeUpdate();
     }
         catch (SQLException e){
@@ -43,6 +43,26 @@ public class UserDao {
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
             pstmt.setString(1, user.getEmail());
             pstmt.setString(2, user.getUsername());
+            ResultSet result = pstmt.executeQuery();
+            return result.next();
+        }
+        catch (SQLException e) {
+            Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE,null,e);
+        }
+        finally {
+            mysql.closeConnection(connection);
+        }
+        return false;
+    }
+    
+    public boolean login(User user){
+        MySqlConnection mysql = new MySqlConnection();
+        Connection connection = mysql.openConnection();
+        String sql = "SELECT * FROM users WHERE email = ? OR password = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)){
+            pstmt.setString(1, user.getEmail());
+            pstmt.setString(2, user.getPassword());
             ResultSet result = pstmt.executeQuery();
             return result.next();
         }

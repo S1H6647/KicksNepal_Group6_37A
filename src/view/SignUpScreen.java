@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.JPasswordField;
@@ -100,11 +101,6 @@ public class SignUpScreen extends javax.swing.JFrame {
         SignUpBtn.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         SignUpBtn.setForeground(new java.awt.Color(255, 255, 255));
         SignUpBtn.setText("SignUp");
-        SignUpBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SignUpBtnActionPerformed(evt);
-            }
-        });
 
         showPasswordBox.setText("Show password");
         showPasswordBox.addActionListener(new java.awt.event.ActionListener() {
@@ -229,18 +225,6 @@ public class SignUpScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SignUpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpBtnActionPerformed
-        // TODO add your handling code here:
-        SignUpBtn.addActionListener((ActionEvent e) -> {
-            String name1 = nameField.getText();
-            if (name1.isEmpty()) {
-                JOptionPane.showMessageDialog(SignUpScreen.this, "Please enter your name!", "Error", JOptionPane.ERROR_MESSAGE);
-            } else {
-                showMessageDialog(SignUpScreen.this, "Name: " + name1, "Success", JOptionPane.INFORMATION_MESSAGE);
-            }
-        });
-    }//GEN-LAST:event_SignUpBtnActionPerformed
-
     private void phoneFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_phoneFieldFocusGained
         // TODO add your handling code here:
         if (phoneField.getText().equals(" Enter your phone number")){
@@ -272,8 +256,6 @@ public class SignUpScreen extends javax.swing.JFrame {
     private void showPasswordBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPasswordBoxActionPerformed
         // TODO add your handling code here:
         showPasswordBox.addActionListener(e -> {
-            System.out.println(e.paramString());
-            System.out.println(e.getActionCommand());
             if (showPasswordBox.isSelected()){
                 passwordField.setEchoChar((char) 0);
             }
@@ -299,6 +281,7 @@ public class SignUpScreen extends javax.swing.JFrame {
 
     public JTextField getNameField() { return nameField; }
     public JTextField getEmailField() { return emailField; }
+    public JTextField getPhoneField() { return phoneField; }
     public JPasswordField getPasswordField() { return passwordField; }
     public JButton getBackBtn() { return BackBtn; }
     

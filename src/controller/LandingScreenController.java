@@ -19,9 +19,11 @@ public class LandingScreenController {
     public LandingScreenController(LandingScreen landingScreen){
         this.landingScreen = landingScreen;
         landingScreen.addSignUpBtnListener(new SignUpBtnListener());
+        landingScreen.addLoginBtnListener(new LoginBtnListener());
     }
     
     public void openScreen(){
+        landingScreen.setTitle("Welcome to KicksNepal");
         landingScreen.setLocationRelativeTo(null);
         landingScreen.setResizable(false);
         landingScreen.setVisible(true);
@@ -39,6 +41,21 @@ public class LandingScreenController {
                 SignUpScreen signUpScreen = new SignUpScreen();
                 SignUpScreenController signUpController = new SignUpScreenController(signUpScreen);
                 signUpController.openScreen();
+            }
+            catch (Exception e){
+                System.out.println("Error : " + e.getMessage());
+            }
+        }
+    }
+    
+    class LoginBtnListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            try {
+                closeScreen();
+                LoginScreen loginScreen = new LoginScreen();
+                LoginScreenController loginController = new LoginScreenController(loginScreen);
+                loginController.openScreen();
             }
             catch (Exception e){
                 System.out.println("Error : " + e.getMessage());

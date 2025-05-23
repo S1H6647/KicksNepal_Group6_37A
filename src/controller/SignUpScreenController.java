@@ -28,6 +28,7 @@ public class SignUpScreenController {
     }
 
     public void openScreen(){
+        signUpScreen.setTitle("Sign Up Screen");
         signUpScreen.setLocationRelativeTo(null);
         signUpScreen.setResizable(false);
         signUpScreen.setVisible(true);
@@ -43,14 +44,20 @@ public class SignUpScreenController {
             try {
                 String name = signUpScreen.getNameField().getText();
                 String email = signUpScreen.getEmailField().getText();
+                String phoneNum = signUpScreen.getPhoneField().getText();
                 String password = new String(signUpScreen.getPasswordField().getPassword());
                 
-                if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                if (name.equals(" Enter your name") && phoneNum.equals(" Enter your phone number") && email.equals(" Enter your email")){
                     JOptionPane.showMessageDialog(signUpScreen, "All fields must be filled.");
-                            return;
+                    return;
+                }
+                else if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                    JOptionPane.showMessageDialog(signUpScreen, "All fields must be filled.");
+                    return;
                 }
                 
-                User user = new User(name,email,password);
+                
+                User user = new User(name,phoneNum,email,password);
                 boolean exists = userDao.checkUser(user);
 
                 if (exists){
@@ -60,6 +67,9 @@ public class SignUpScreenController {
                     userDao.signup(user);
                     JOptionPane.showMessageDialog(signUpScreen, "Registeration successful!");
                     closeScreen();
+                    UserDashboard ud = new UserDashboard();
+                    ud.setLocationRelativeTo(null);
+                    ud.setVisible(true);
                 }
             }
             catch (HeadlessException he){

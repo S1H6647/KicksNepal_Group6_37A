@@ -11,7 +11,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import model.User;
 import view.LandingScreen;
+import view.LoginScreen;
 import view.SignUpScreen;
+import view.UserDashboard;
 
 /**
  *
@@ -19,47 +21,56 @@ import view.SignUpScreen;
  */
 public class LoginScreenController {
     private final UserDao userDao = new UserDao();
-    private final SignUpScreen signUpScreen;
+    private final LoginScreen loginScreen;
 
-    public LoginScreenController(SignUpScreen signUpScreen){
-        this.signUpScreen = signUpScreen;
+    public LoginScreenController(LoginScreen loginScreen){
+        this.loginScreen = loginScreen;
         
-        signUpScreen.addSubmitListener(new SubmitListener());
-        signUpScreen.addBackBtnListener(new BackBtnListener());
+        loginScreen.addLoginBtnListener(new LoginBtnListener());
+        loginScreen.addBackBtnListener(new BackBtnListener());
     }
 
     public void openScreen(){
-        signUpScreen.setLocationRelativeTo(null);
-        signUpScreen.setResizable(false);
-        signUpScreen.setVisible(true);
+        loginScreen.setTitle("Login Screen");
+        loginScreen.setLocationRelativeTo(null);
+        loginScreen.setResizable(false);
+        loginScreen.setVisible(true);
     }
 
     public void closeScreen(){
-        signUpScreen.dispose();
+        loginScreen.dispose();
     }
 
-    class SubmitListener implements ActionListener {
+    class LoginBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent ae){
             try {
-                String email = signUpScreen.getEmailField().getText();
-                String password = new String(signUpScreen.getPasswordField().getPassword());
+                String email = loginScreen.getEmailField().getText();
+                String password = new String(loginScreen.getPasswordField().getPassword());
                 
-                if (email.isEmpty() || password.isEmpty()) {
-                    JOptionPane.showMessageDialog(signUpScreen, "All fields must be filled.");
+                if (email.equals(" Enter your email")){
+                        JOptionPane.showMessageDialog(loginScreen, "Please enter your email!");
+                        return;
+                    }
+                else if (email.isEmpty() || password.isEmpty()) {
+                    JOptionPane.showMessageDialog(loginScreen, "All fields must be filled.");
                             return;
                 }
                 
                 User user = new User(email,password);
-                boolean exists = userDao.checkUser(user);
+                boolean validLogin = userDao.login(user);
 
-                if (exists){
-                    JOptionPane.showMessageDialog(signUpScreen, "User already exists!");
+                if (!validLogin){
+                    JOptionPane.showMessageDialog(loginScreen, "User doesn't exist.");
                 }
+                else if (!email.contentEquals("@gmail.com") || !email.contentEquals("@outlook.com")){
+                        JOptionPane.showMessageDialog(loginScreen, "Invalid Email format.");
+                    }
                 else {
-                    userDao.signup(user);
-                    JOptionPane.showMessageDialog(signUpScreen, "Registeration successful!");
                     closeScreen();
+                    UserDashboard ud = new UserDashboard();
+                    ud.setLocationRelativeTo(null);
+                    ud.setVisible(true);
                 }
             }
             catch (HeadlessException he){

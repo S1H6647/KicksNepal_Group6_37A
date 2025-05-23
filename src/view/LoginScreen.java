@@ -1,7 +1,11 @@
 package view;
 
+import controller.LandingScreenController;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 /**
  *
@@ -188,6 +192,18 @@ public class LoginScreen extends javax.swing.JFrame {
         });
     }//GEN-LAST:event_showPasswordBoxActionPerformed
 
+    public JTextField getEmailField() { return emailField; }
+    public JPasswordField getPasswordField() { return passwordField; }
+    
+    public void addLoginBtnListener(ActionListener listener){
+        LoginBtn.addActionListener(listener);
+    }
+    
+    public void addBackBtnListener(ActionListener listener){
+        BackBtn.addActionListener(listener);
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -236,4 +252,5 @@ public class LoginScreen extends javax.swing.JFrame {
     private javax.swing.JLabel passwordText;
     private javax.swing.JCheckBox showPasswordBox;
     // End of variables declaration//GEN-END:variables
+
 }
