@@ -10,9 +10,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import model.User;
+import view.ForgotPasswordScreen;
 import view.LandingScreen;
 import view.LoginScreen;
-import view.SignUpScreen;
 import view.UserDashboard;
 
 /**
@@ -28,6 +28,7 @@ public class LoginScreenController {
         
         loginScreen.addLoginBtnListener(new LoginBtnListener());
         loginScreen.addBackBtnListener(new BackBtnListener());
+        loginScreen.addForgotPasswordBtnListener(new ForgotPasswordListener());
     }
 
     public void openScreen(){
@@ -61,12 +62,10 @@ public class LoginScreenController {
                 boolean validLogin = userDao.login(user);
 
                 if (!validLogin){
-                    JOptionPane.showMessageDialog(loginScreen, "User doesn't exist.");
+                    JOptionPane.showMessageDialog(loginScreen, "Invalid credentials or User doesn't exist.");
                 }
-                else if (!email.contentEquals("@gmail.com") || !email.contentEquals("@outlook.com")){
-                        JOptionPane.showMessageDialog(loginScreen, "Invalid Email format.");
-                    }
                 else {
+                    JOptionPane.showMessageDialog(loginScreen, "Login successful.");
                     closeScreen();
                     UserDashboard ud = new UserDashboard();
                     ud.setLocationRelativeTo(null);
@@ -89,6 +88,20 @@ public class LoginScreenController {
                 landingScreenController.openScreen();
             }
             catch (Exception e){
+                System.out.println("Error " + e.getMessage());
+            }
+        }
+    }
+    
+    class ForgotPasswordListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent ae){
+            try {
+                closeScreen();
+                ForgotPasswordScreen forgotPasswordScreen = new ForgotPasswordScreen();
+                ForgotPasswordController forgotPasswordController = new ForgotPasswordController(forgotPasswordScreen);
+                forgotPasswordController.openScreen();
+            } catch (Exception e) {
                 System.out.println("Error " + e.getMessage());
             }
         }

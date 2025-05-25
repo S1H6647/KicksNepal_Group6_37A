@@ -1,14 +1,7 @@
 package view;
 
-import controller.SignUpScreenController;
-import java.awt.Dimension;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -323,26 +316,8 @@ public class SignUpScreen extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            frame();
+            new SignUpScreen().setVisible(true);
         });        
-    }
-    
-    public static void frame(){
-        SignUpScreen frame = new SignUpScreen();
-        frame.setResizable(false);
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int screenWidth = screenSize.width;
-        int screenHeight = screenSize.height;
-
-        // Get frame size
-        int frameWidth = 1366;
-        int frameHeight = 768;
-
-        // Calculate center position
-        int x = (screenWidth - frameWidth) / 2;
-        int y = (screenHeight - frameHeight) / 2;
-        frame.setLocation(x, y);
-        frame.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
