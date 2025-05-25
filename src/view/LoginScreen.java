@@ -1,8 +1,5 @@
 package view;
 
-import controller.LandingScreenController;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -201,6 +198,10 @@ public class LoginScreen extends javax.swing.JFrame {
     
     public void addBackBtnListener(ActionListener listener){
         BackBtn.addActionListener(listener);
+    }
+    
+    public void addForgotPasswordBtnListener (ActionListener listener){
+        forgotPasswordBtn.addActionListener(listener);
     }
     
     

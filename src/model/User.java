@@ -14,17 +14,38 @@ public class User {
     private String phoneNum;
     private String email;
     private String password;
+    private String favFood;
+    private String favPet;
 
+    //TODO: SignUp
     public User (String username, String phoneNum, String email, String password){
         this.username = username;
         this.email = email;
         this.phoneNum = phoneNum;
         this.password = password;
     }
-    
+
+    //TODO: Login
     public User (String email, String password) {
         this.email = email;
         this.password = password;
+    }
+
+    //TODO: Security Questions
+    public User (String email, String favFood, String favPet){
+        this.email = email;
+        this.favFood = favFood;
+        this.favPet = favPet;
+    }
+
+    //TODO: Forgot Password
+    public User (String email, String favFood, String favPet, String password, boolean isForgotPassword){
+        this.email = email;
+        this.favFood = favFood;
+        this.favPet = favPet;
+        if (isForgotPassword) {
+            this.password = password;
+        }
     }
 
     public String getUsername() {
@@ -58,5 +79,21 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getFavFood() {
+        return favFood;
+    }
+
+    public void setFavFood(String favFood) {
+        this.favFood = favFood;
+    }
+
+    public String getFavPet() {
+        return favPet;
+    }
+
+    public void setFavPet(String favPet) {
+        this.favPet = favPet;
     }
 }
