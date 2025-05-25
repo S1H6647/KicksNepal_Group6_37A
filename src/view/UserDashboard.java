@@ -26,33 +26,603 @@ public class UserDashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        jTextField17 = new javax.swing.JTextField();
+        jTextField18 = new javax.swing.JTextField();
+        jTextField19 = new javax.swing.JTextField();
+        jTextField20 = new javax.swing.JTextField();
+        jTextField21 = new javax.swing.JTextField();
+        jButton10 = new javax.swing.JButton();
+        greetings = new javax.swing.JLabel();
+        booking = new javax.swing.JButton();
+        tournaments = new javax.swing.JButton();
+        userprofile = new javax.swing.JButton();
+        Futsal1 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        futsalName1 = new javax.swing.JTextField();
+        LocationName1 = new javax.swing.JTextField();
+        TypeName1 = new javax.swing.JTextField();
+        PrizeName1 = new javax.swing.JTextField();
+        OpeningTime1 = new javax.swing.JTextField();
+        BookNow1 = new javax.swing.JButton();
+        Futsal2 = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        FutsalName2 = new javax.swing.JTextField();
+        LocationName2 = new javax.swing.JTextField();
+        TypeName2 = new javax.swing.JTextField();
+        PrizeName2 = new javax.swing.JTextField();
+        OpeningName2 = new javax.swing.JTextField();
+        BookNow2 = new javax.swing.JButton();
+        Futsal3 = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        FutsalName3 = new javax.swing.JTextField();
+        LocationName3 = new javax.swing.JTextField();
+        TypeName3 = new javax.swing.JTextField();
+        PrizeName3 = new javax.swing.JTextField();
+        OpeningTime3 = new javax.swing.JTextField();
+        BookNow3 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        Search1 = new javax.swing.JTextField();
+        search2 = new javax.swing.JButton();
+        username = new javax.swing.JTextField();
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setPreferredSize(new java.awt.Dimension(390, 213));
+
+        jLabel24.setText("Futsal Name :");
+
+        jLabel26.setText("Location :");
+
+        jLabel27.setText("Type :");
+
+        jLabel28.setText("Prize : ");
+
+        jLabel29.setText("Opening Time :");
+
+        jButton9.setBackground(new java.awt.Color(0, 0, 255));
+        jButton9.setText("Book Now!");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jTextField21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField21ActionPerformed(evt);
+            }
+        });
+
+        jButton10.setBackground(new java.awt.Color(0, 102, 204));
+        jButton10.setText("Book Now!");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jTextField20, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField18, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField17, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField21, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel25)
+                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1366, 768));
+        setBackground(java.awt.SystemColor.control);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 96)); // NOI18N
-        jLabel1.setText("User Dashboard");
+        greetings.setBackground(new java.awt.Color(255, 255, 255));
+        greetings.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
+        greetings.setText("Welcome, ");
+        greetings.setPreferredSize(new java.awt.Dimension(131, 27));
+
+        booking.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        booking.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendar-days-solid.png"))); // NOI18N
+        booking.setText("Current Booking");
+        booking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bookingActionPerformed(evt);
+            }
+        });
+
+        tournaments.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        tournaments.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/trophy-solid.png"))); // NOI18N
+        tournaments.setText("Tournaments");
+        tournaments.setPreferredSize(new java.awt.Dimension(131, 27));
+        tournaments.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tournamentsActionPerformed(evt);
+            }
+        });
+
+        userprofile.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        userprofile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user-solid.png"))); // NOI18N
+        userprofile.setText("User Profile");
+        userprofile.setPreferredSize(new java.awt.Dimension(131, 27));
+        userprofile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userprofileActionPerformed(evt);
+            }
+        });
+
+        Futsal1.setBackground(new java.awt.Color(255, 255, 255));
+        Futsal1.setPreferredSize(new java.awt.Dimension(390, 213));
+
+        jLabel12.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel12.setText("Futsal Name :");
+
+        jLabel14.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel14.setText("Location :");
+
+        jLabel16.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel16.setText("Type :");
+
+        jLabel17.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel17.setText("Prize : ");
+
+        jLabel18.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel18.setText("Opening Time :");
+
+        TypeName1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TypeName1ActionPerformed(evt);
+            }
+        });
+
+        OpeningTime1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OpeningTime1ActionPerformed(evt);
+            }
+        });
+
+        BookNow1.setBackground(new java.awt.Color(51, 51, 255));
+        BookNow1.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
+        BookNow1.setForeground(new java.awt.Color(255, 255, 255));
+        BookNow1.setText("Book Now!");
+
+        javax.swing.GroupLayout Futsal1Layout = new javax.swing.GroupLayout(Futsal1);
+        Futsal1.setLayout(Futsal1Layout);
+        Futsal1Layout.setHorizontalGroup(
+            Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Futsal1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Futsal1Layout.createSequentialGroup()
+                        .addGroup(Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Futsal1Layout.createSequentialGroup()
+                        .addGroup(Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)))
+                .addGroup(Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(PrizeName1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TypeName1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LocationName1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(futsalName1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(OpeningTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(Futsal1Layout.createSequentialGroup()
+                .addComponent(BookNow1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        Futsal1Layout.setVerticalGroup(
+            Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Futsal1Layout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addGroup(Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Futsal1Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addGap(164, 164, 164))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Futsal1Layout.createSequentialGroup()
+                        .addGroup(Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel12)
+                            .addComponent(futsalName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel14)
+                            .addComponent(LocationName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel16)
+                            .addComponent(TypeName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel17)
+                            .addComponent(PrizeName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel18)
+                            .addComponent(OpeningTime1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addComponent(BookNow1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        Futsal2.setBackground(new java.awt.Color(255, 255, 255));
+        Futsal2.setPreferredSize(new java.awt.Dimension(390, 213));
+
+        jLabel36.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel36.setText("Futsal Name :");
+
+        jLabel38.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel38.setText("Location :");
+
+        jLabel39.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel39.setText("Type :");
+
+        jLabel40.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel40.setText("Prize : ");
+
+        jLabel41.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel41.setText("Opening Time :");
+
+        OpeningName2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OpeningName2ActionPerformed(evt);
+            }
+        });
+
+        BookNow2.setBackground(new java.awt.Color(51, 51, 255));
+        BookNow2.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
+        BookNow2.setForeground(new java.awt.Color(255, 255, 255));
+        BookNow2.setText("Book Now!");
+
+        javax.swing.GroupLayout Futsal2Layout = new javax.swing.GroupLayout(Futsal2);
+        Futsal2.setLayout(Futsal2Layout);
+        Futsal2Layout.setHorizontalGroup(
+            Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Futsal2Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Futsal2Layout.createSequentialGroup()
+                        .addGroup(Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Futsal2Layout.createSequentialGroup()
+                        .addGroup(Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)))
+                .addGroup(Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(PrizeName2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TypeName2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LocationName2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FutsalName2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(OpeningName2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(Futsal2Layout.createSequentialGroup()
+                .addComponent(BookNow2, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        Futsal2Layout.setVerticalGroup(
+            Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Futsal2Layout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addGroup(Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Futsal2Layout.createSequentialGroup()
+                        .addComponent(jLabel37)
+                        .addGap(164, 164, 164))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Futsal2Layout.createSequentialGroup()
+                        .addGroup(Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel36)
+                            .addComponent(FutsalName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel38)
+                            .addComponent(LocationName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel39)
+                            .addComponent(TypeName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel40)
+                            .addComponent(PrizeName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel41)
+                            .addComponent(OpeningName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addComponent(BookNow2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        Futsal3.setBackground(new java.awt.Color(255, 255, 255));
+        Futsal3.setPreferredSize(new java.awt.Dimension(390, 213));
+
+        jLabel42.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel42.setText("Futsal Name :");
+
+        jLabel44.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel44.setText("Location :");
+
+        jLabel45.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel45.setText("Type :");
+
+        jLabel46.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel46.setText("Prize : ");
+
+        jLabel47.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        jLabel47.setText("Opening Time :");
+
+        OpeningTime3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OpeningTime3ActionPerformed(evt);
+            }
+        });
+
+        BookNow3.setBackground(new java.awt.Color(51, 51, 255));
+        BookNow3.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
+        BookNow3.setForeground(new java.awt.Color(255, 255, 255));
+        BookNow3.setText("Book Now!");
+
+        javax.swing.GroupLayout Futsal3Layout = new javax.swing.GroupLayout(Futsal3);
+        Futsal3.setLayout(Futsal3Layout);
+        Futsal3Layout.setHorizontalGroup(
+            Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Futsal3Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Futsal3Layout.createSequentialGroup()
+                        .addGroup(Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Futsal3Layout.createSequentialGroup()
+                        .addGroup(Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)))
+                .addGroup(Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(PrizeName3, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TypeName3, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LocationName3, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FutsalName3, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(OpeningTime3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(Futsal3Layout.createSequentialGroup()
+                .addComponent(BookNow3, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        Futsal3Layout.setVerticalGroup(
+            Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Futsal3Layout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addGroup(Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Futsal3Layout.createSequentialGroup()
+                        .addComponent(jLabel43)
+                        .addGap(164, 164, 164))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Futsal3Layout.createSequentialGroup()
+                        .addGroup(Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel42)
+                            .addComponent(FutsalName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel44)
+                            .addComponent(LocationName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel45)
+                            .addComponent(TypeName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel46)
+                            .addComponent(PrizeName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Futsal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel47)
+                            .addComponent(OpeningTime3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addComponent(BookNow3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(131, 27));
+
+        Search1.setPreferredSize(new java.awt.Dimension(131, 27));
+
+        search2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/magnifying-glass-solid.png"))); // NOI18N
+        search2.setPreferredSize(new java.awt.Dimension(131, 27));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(Search1, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(search2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Search1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(search2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        username.setBackground(java.awt.SystemColor.control);
+        username.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
+        username.setPreferredSize(new java.awt.Dimension(131, 27));
+        username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(323, 323, 323)
-                .addComponent(jLabel1)
-                .addContainerGap(405, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(greetings, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(booking, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(tournaments, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(userprofile, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(Futsal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addComponent(Futsal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                        .addComponent(Futsal3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(47, 47, 47))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(289, 289, 289)
-                .addComponent(jLabel1)
-                .addContainerGap(376, Short.MAX_VALUE))
+                .addGap(62, 62, 62)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(tournaments, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(booking, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(userprofile, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(greetings, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(73, 73, 73)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Futsal1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Futsal2, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Futsal3, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(385, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookingActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bookingActionPerformed
+
+    private void tournamentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tournamentsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tournamentsActionPerformed
+
+    private void userprofileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userprofileActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userprofileActionPerformed
+
+    private void OpeningTime1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpeningTime1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OpeningTime1ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField21ActionPerformed
+
+    private void OpeningName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpeningName2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OpeningName2ActionPerformed
+
+    private void OpeningTime3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpeningTime3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OpeningTime3ActionPerformed
+
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameActionPerformed
+
+    private void TypeName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeName1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TypeName1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,97 +660,66 @@ public class UserDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SignUpBtn;
-    private javax.swing.JButton SignUpBtn1;
-    private javax.swing.JButton SignUpBtn2;
-    private javax.swing.JButton SignUpBtn3;
-    private javax.swing.JButton SignUpBtn4;
-    private javax.swing.JButton SignUpBtn5;
-    private javax.swing.JButton SignUpBtn6;
-    private javax.swing.JPanel SignUpForm;
-    private javax.swing.JPanel SignUpForm1;
-    private javax.swing.JPanel SignUpForm2;
-    private javax.swing.JPanel SignUpForm3;
-    private javax.swing.JPanel SignUpForm4;
-    private javax.swing.JPanel SignUpForm5;
-    private javax.swing.JPanel SignUpForm6;
-    private javax.swing.JLabel SignUpText;
-    private javax.swing.JLabel SignUpText1;
-    private javax.swing.JLabel SignUpText2;
-    private javax.swing.JLabel SignUpText3;
-    private javax.swing.JLabel SignUpText4;
-    private javax.swing.JLabel SignUpText5;
-    private javax.swing.JLabel SignUpText6;
-    private javax.swing.JTextField emailField;
-    private javax.swing.JTextField emailField1;
-    private javax.swing.JTextField emailField2;
-    private javax.swing.JTextField emailField3;
-    private javax.swing.JTextField emailField4;
-    private javax.swing.JTextField emailField5;
-    private javax.swing.JTextField emailField6;
-    private javax.swing.JLabel emailText;
-    private javax.swing.JLabel emailText1;
-    private javax.swing.JLabel emailText2;
-    private javax.swing.JLabel emailText3;
-    private javax.swing.JLabel emailText4;
-    private javax.swing.JLabel emailText5;
-    private javax.swing.JLabel emailText6;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton BookNow1;
+    private javax.swing.JButton BookNow2;
+    private javax.swing.JButton BookNow3;
+    private javax.swing.JPanel Futsal1;
+    private javax.swing.JPanel Futsal2;
+    private javax.swing.JPanel Futsal3;
+    private javax.swing.JTextField FutsalName2;
+    private javax.swing.JTextField FutsalName3;
+    private javax.swing.JTextField LocationName1;
+    private javax.swing.JTextField LocationName2;
+    private javax.swing.JTextField LocationName3;
+    private javax.swing.JTextField OpeningName2;
+    private javax.swing.JTextField OpeningTime1;
+    private javax.swing.JTextField OpeningTime3;
+    private javax.swing.JTextField PrizeName1;
+    private javax.swing.JTextField PrizeName2;
+    private javax.swing.JTextField PrizeName3;
+    private javax.swing.JTextField Search1;
+    private javax.swing.JTextField TypeName1;
+    private javax.swing.JTextField TypeName2;
+    private javax.swing.JTextField TypeName3;
+    private javax.swing.JButton booking;
+    private javax.swing.JTextField futsalName1;
+    private javax.swing.JLabel greetings;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JTextField nameField;
-    private javax.swing.JTextField nameField1;
-    private javax.swing.JTextField nameField2;
-    private javax.swing.JTextField nameField3;
-    private javax.swing.JTextField nameField4;
-    private javax.swing.JTextField nameField5;
-    private javax.swing.JTextField nameField6;
-    private javax.swing.JLabel nameText;
-    private javax.swing.JLabel nameText1;
-    private javax.swing.JLabel nameText2;
-    private javax.swing.JLabel nameText3;
-    private javax.swing.JLabel nameText4;
-    private javax.swing.JLabel nameText5;
-    private javax.swing.JLabel nameText6;
-    private javax.swing.JPasswordField passwordField;
-    private javax.swing.JPasswordField passwordField1;
-    private javax.swing.JPasswordField passwordField2;
-    private javax.swing.JPasswordField passwordField3;
-    private javax.swing.JPasswordField passwordField4;
-    private javax.swing.JPasswordField passwordField5;
-    private javax.swing.JPasswordField passwordField6;
-    private javax.swing.JLabel passwordText;
-    private javax.swing.JLabel passwordText1;
-    private javax.swing.JLabel passwordText2;
-    private javax.swing.JLabel passwordText3;
-    private javax.swing.JLabel passwordText4;
-    private javax.swing.JLabel passwordText5;
-    private javax.swing.JLabel passwordText6;
-    private javax.swing.JTextField phoneField;
-    private javax.swing.JTextField phoneField1;
-    private javax.swing.JTextField phoneField2;
-    private javax.swing.JTextField phoneField3;
-    private javax.swing.JTextField phoneField4;
-    private javax.swing.JTextField phoneField5;
-    private javax.swing.JTextField phoneField6;
-    private javax.swing.JLabel phoneText;
-    private javax.swing.JLabel phoneText1;
-    private javax.swing.JLabel phoneText2;
-    private javax.swing.JLabel phoneText3;
-    private javax.swing.JLabel phoneText4;
-    private javax.swing.JLabel phoneText5;
-    private javax.swing.JLabel phoneText6;
-    private javax.swing.JCheckBox showPasswordBox;
-    private javax.swing.JCheckBox showPasswordBox1;
-    private javax.swing.JCheckBox showPasswordBox2;
-    private javax.swing.JCheckBox showPasswordBox3;
-    private javax.swing.JCheckBox showPasswordBox4;
-    private javax.swing.JCheckBox showPasswordBox5;
-    private javax.swing.JCheckBox showPasswordBox6;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
+    private javax.swing.JButton search2;
+    private javax.swing.JButton tournaments;
+    private javax.swing.JTextField username;
+    private javax.swing.JButton userprofile;
     // End of variables declaration//GEN-END:variables
 }
