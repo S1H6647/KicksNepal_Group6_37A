@@ -116,11 +116,11 @@ public class LandingScreen extends javax.swing.JFrame {
     }
     
     public JButton LoginBtn(){
-        return SignUpBtn;
+        return LoginBtn;
     }
     
     public void addLoginBtnListener(java.awt.event.ActionListener listener){
-        SignUpBtn.addActionListener(listener);
+        LoginBtn.addActionListener(listener);
     }
     
     /**

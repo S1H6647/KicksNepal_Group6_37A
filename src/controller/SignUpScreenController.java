@@ -19,6 +19,7 @@ import javax.swing.*;
 public class SignUpScreenController {
     private final UserDao userDao = new UserDao();
     private final SignUpScreen signUpScreen;
+    private final Validation validation = new Validation();
 
     public SignUpScreenController(SignUpScreen signUpScreen){
         this.signUpScreen = signUpScreen;
@@ -28,6 +29,7 @@ public class SignUpScreenController {
     }
 
     public void openScreen(){
+        signUpScreen.setTitle("Sign Up Screen");
         signUpScreen.setLocationRelativeTo(null);
         signUpScreen.setResizable(false);
         signUpScreen.setVisible(true);
@@ -41,16 +43,31 @@ public class SignUpScreenController {
         @Override
         public void actionPerformed(ActionEvent ae){
             try {
-                String name = signUpScreen.getNameField().getText();
-                String email = signUpScreen.getEmailField().getText();
+                String name = signUpScreen.getNameField().getText().toLowerCase();
+                String email = signUpScreen.getEmailField().getText().toLowerCase();
+                String phoneNum = signUpScreen.getPhoneField().getText();
                 String password = new String(signUpScreen.getPasswordField().getPassword());
                 
-                if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                if (name.equals(" Enter your name") && phoneNum.equals(" Enter your phone number") && email.equals(" Enter your email")){
                     JOptionPane.showMessageDialog(signUpScreen, "All fields must be filled.");
-                            return;
+                    return;
+                }
+                else if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                    JOptionPane.showMessageDialog(signUpScreen, "All fields must be filled.");
+                    return;
+                } else if (!validation.isValidPhoneNumber(phoneNum)) {
+                    JOptionPane.showMessageDialog(signUpScreen, "Invalid Phone format.");
+                    return;
+                } else if (validation.isValidEmail(email)) {
+                    JOptionPane.showMessageDialog(signUpScreen, "Invalid Email format.");
+                    return;
+                } else if (validation.isValidPassword(password)) {
+                    JOptionPane.showMessageDialog(signUpScreen, "Password must contain at least 1 of Uppercase letter, Lowercase letter, Special character and Number.");
+                    return;
                 }
                 
-                User user = new User(name,email,password);
+                
+                User user = new User(name,phoneNum,email);
                 boolean exists = userDao.checkUser(user);
 
                 if (exists){
@@ -58,8 +75,11 @@ public class SignUpScreenController {
                 }
                 else {
                     userDao.signup(user);
-                    JOptionPane.showMessageDialog(signUpScreen, "Registeration successful!");
+                    JOptionPane.showMessageDialog(signUpScreen, "Registration successful!");
                     closeScreen();
+                    SecurityQuestionScreen securityQuestionScreen = new SecurityQuestionScreen();
+                    SecurityQuestionController securityQuestionController = new SecurityQuestionController(securityQuestionScreen);
+                    securityQuestionController.openScreen();
                 }
             }
             catch (HeadlessException he){

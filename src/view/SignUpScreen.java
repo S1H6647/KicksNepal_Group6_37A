@@ -1,13 +1,7 @@
 package view;
 
-import controller.SignUpScreenController;
-import java.awt.Dimension;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -100,11 +94,6 @@ public class SignUpScreen extends javax.swing.JFrame {
         SignUpBtn.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         SignUpBtn.setForeground(new java.awt.Color(255, 255, 255));
         SignUpBtn.setText("SignUp");
-        SignUpBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SignUpBtnActionPerformed(evt);
-            }
-        });
 
         showPasswordBox.setText("Show password");
         showPasswordBox.addActionListener(new java.awt.event.ActionListener() {
@@ -229,18 +218,6 @@ public class SignUpScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SignUpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpBtnActionPerformed
-        // TODO add your handling code here:
-        SignUpBtn.addActionListener((ActionEvent e) -> {
-            String name1 = nameField.getText();
-            if (name1.isEmpty()) {
-                JOptionPane.showMessageDialog(SignUpScreen.this, "Please enter your name!", "Error", JOptionPane.ERROR_MESSAGE);
-            } else {
-                showMessageDialog(SignUpScreen.this, "Name: " + name1, "Success", JOptionPane.INFORMATION_MESSAGE);
-            }
-        });
-    }//GEN-LAST:event_SignUpBtnActionPerformed
-
     private void phoneFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_phoneFieldFocusGained
         // TODO add your handling code here:
         if (phoneField.getText().equals(" Enter your phone number")){
@@ -272,8 +249,6 @@ public class SignUpScreen extends javax.swing.JFrame {
     private void showPasswordBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPasswordBoxActionPerformed
         // TODO add your handling code here:
         showPasswordBox.addActionListener(e -> {
-            System.out.println(e.paramString());
-            System.out.println(e.getActionCommand());
             if (showPasswordBox.isSelected()){
                 passwordField.setEchoChar((char) 0);
             }
@@ -299,6 +274,7 @@ public class SignUpScreen extends javax.swing.JFrame {
 
     public JTextField getNameField() { return nameField; }
     public JTextField getEmailField() { return emailField; }
+    public JTextField getPhoneField() { return phoneField; }
     public JPasswordField getPasswordField() { return passwordField; }
     public JButton getBackBtn() { return BackBtn; }
     
@@ -340,26 +316,8 @@ public class SignUpScreen extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            frame();
+            new SignUpScreen().setVisible(true);
         });        
-    }
-    
-    public static void frame(){
-        SignUpScreen frame = new SignUpScreen();
-        frame.setResizable(false);
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int screenWidth = screenSize.width;
-        int screenHeight = screenSize.height;
-
-        // Get frame size
-        int frameWidth = 1366;
-        int frameHeight = 768;
-
-        // Calculate center position
-        int x = (screenWidth - frameWidth) / 2;
-        int y = (screenHeight - frameHeight) / 2;
-        frame.setLocation(x, y);
-        frame.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
