@@ -67,9 +67,9 @@ public class LoginScreenController {
                 else {
                     JOptionPane.showMessageDialog(loginScreen, "Login successful.");
                     closeScreen();
-                    UserDashboard ud = new UserDashboard();
-                    ud.setLocationRelativeTo(null);
-                    ud.setVisible(true);
+                    UserDashboard userDashboard = new UserDashboard();
+                    UserDashboardController userDashboardController = new UserDashboardController(userDashboard);
+                    userDashboardController.openScreen();
                 }
             }
             catch (HeadlessException he){
