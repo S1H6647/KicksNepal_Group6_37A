@@ -67,7 +67,7 @@ public class SignUpScreenController {
                 }
                 
                 
-                User user = new User(name,phoneNum,email);
+                User user = new User(name,phoneNum,email,password);
                 boolean exists = userDao.checkUser(user);
 
                 if (exists){
