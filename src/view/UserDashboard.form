@@ -347,8 +347,9 @@
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                   <Component id="BookNow1" min="-2" pref="390" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -443,9 +444,6 @@
               <Font name="Leelawadee UI" size="13" style="0"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="futsalName1ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="LocationName1">
           <Properties>
@@ -460,9 +458,6 @@
               <Font name="Leelawadee UI" size="13" style="0"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TypeName1ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="PrizeName1">
           <Properties>
@@ -470,16 +465,6 @@
               <Font name="Leelawadee UI" size="13" style="0"/>
             </Property>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="OpeningTime1">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Leelawadee UI" size="13" style="0"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OpeningTime1ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BookNow1">
           <Properties>
@@ -493,6 +478,13 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Book Now!"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="OpeningTime1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Leelawadee UI" size="13" style="0"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>
@@ -665,9 +657,6 @@
               <Font name="Leelawadee UI" size="13" style="0"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OpeningName2ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BookNow2">
           <Properties>
@@ -853,9 +842,6 @@
               <Font name="Leelawadee UI" size="13" style="0"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OpeningTime3ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BookNow3">
           <Properties>
@@ -941,9 +927,6 @@
           <Dimension value="[131, 32]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameActionPerformed"/>
-      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="Futsal4">
       <Properties>
@@ -1122,9 +1105,6 @@
               <Font name="Leelawadee UI" size="13" style="0"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OpeningTime2ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BookNow4">
           <Properties>
@@ -1310,9 +1290,6 @@
               <Font name="Leelawadee UI" size="13" style="0"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OpeningName3ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BookNow5">
           <Properties>
@@ -1498,9 +1475,6 @@
               <Font name="Leelawadee UI" size="13" style="0"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OpeningTime4ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BookNow6">
           <Properties>

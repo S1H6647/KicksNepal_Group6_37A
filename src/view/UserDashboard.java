@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package view;
 
 /**
@@ -13,8 +10,10 @@ public class UserDashboard extends javax.swing.JFrame {
     /**
      * Creates new form UserDashboard
      */
-    public UserDashboard() {
-        initComponents();
+    public UserDashboard() { 
+    initComponents();
+    }
+       
        
 
     /**
@@ -55,8 +54,8 @@ public class UserDashboard extends javax.swing.JFrame {
         LocationName1 = new javax.swing.JTextField();
         TypeName1 = new javax.swing.JTextField();
         PrizeName1 = new javax.swing.JTextField();
-        OpeningTime1 = new javax.swing.JTextField();
         BookNow1 = new javax.swing.JButton();
+        OpeningTime1 = new javax.swing.JTextField();
         Futsal2 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
@@ -259,34 +258,19 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel18.setText("Opening Time :");
 
         futsalName1.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
-        futsalName1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                futsalName1ActionPerformed(evt);
-            }
-        });
 
         LocationName1.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
 
         TypeName1.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
-        TypeName1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TypeName1ActionPerformed(evt);
-            }
-        });
 
         PrizeName1.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
-
-        OpeningTime1.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
-        OpeningTime1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OpeningTime1ActionPerformed(evt);
-            }
-        });
 
         BookNow1.setBackground(new java.awt.Color(51, 51, 255));
         BookNow1.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
         BookNow1.setForeground(new java.awt.Color(255, 255, 255));
         BookNow1.setText("Book Now!");
+
+        OpeningTime1.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
 
         javax.swing.GroupLayout Futsal1Layout = new javax.swing.GroupLayout(Futsal1);
         Futsal1.setLayout(Futsal1Layout);
@@ -316,8 +300,9 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(Futsal1Layout.createSequentialGroup()
+                .addGap(0, 0, 0)
                 .addComponent(BookNow1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         Futsal1Layout.setVerticalGroup(
             Futsal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -378,11 +363,6 @@ public class UserDashboard extends javax.swing.JFrame {
         PrizeName2.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
 
         OpeningName2.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
-        OpeningName2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OpeningName2ActionPerformed(evt);
-            }
-        });
 
         BookNow2.setBackground(new java.awt.Color(51, 51, 255));
         BookNow2.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
@@ -479,11 +459,6 @@ public class UserDashboard extends javax.swing.JFrame {
         PrizeName3.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
 
         OpeningTime3.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
-        OpeningTime3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OpeningTime3ActionPerformed(evt);
-            }
-        });
 
         BookNow3.setBackground(new java.awt.Color(51, 51, 255));
         BookNow3.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
@@ -584,11 +559,6 @@ public class UserDashboard extends javax.swing.JFrame {
         username.setBackground(java.awt.SystemColor.control);
         username.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
         username.setPreferredSize(new java.awt.Dimension(131, 32));
-        username.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usernameActionPerformed(evt);
-            }
-        });
 
         Futsal4.setBackground(new java.awt.Color(255, 255, 255));
         Futsal4.setFont(new java.awt.Font("Leelawadee UI", 0, 12)); // NOI18N
@@ -628,11 +598,6 @@ public class UserDashboard extends javax.swing.JFrame {
         PrizeName4.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
 
         OpeningTime2.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
-        OpeningTime2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OpeningTime2ActionPerformed(evt);
-            }
-        });
 
         BookNow4.setBackground(new java.awt.Color(51, 51, 255));
         BookNow4.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
@@ -729,11 +694,6 @@ public class UserDashboard extends javax.swing.JFrame {
         PrizeName5.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
 
         OpeningName3.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
-        OpeningName3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OpeningName3ActionPerformed(evt);
-            }
-        });
 
         BookNow5.setBackground(new java.awt.Color(51, 51, 255));
         BookNow5.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
@@ -830,11 +790,6 @@ public class UserDashboard extends javax.swing.JFrame {
         PrizeName6.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
 
         OpeningTime4.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
-        OpeningTime4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OpeningTime4ActionPerformed(evt);
-            }
-        });
 
         BookNow6.setBackground(new java.awt.Color(51, 51, 255));
         BookNow6.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
@@ -967,37 +922,14 @@ public class UserDashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void OpeningTime1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpeningTime1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OpeningTime1ActionPerformed
-
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
+
     private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField21ActionPerformed
-
-    private void OpeningName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpeningName2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OpeningName2ActionPerformed
-
-    private void OpeningTime3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpeningTime3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OpeningTime3ActionPerformed
-
-    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_usernameActionPerformed
-
-    private void TypeName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeName1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TypeName1ActionPerformed
-
-    private void futsalName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_futsalName1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_futsalName1ActionPerformed
 
     private void futsalName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_futsalName2ActionPerformed
         // TODO add your handling code here:
@@ -1006,18 +938,6 @@ public class UserDashboard extends javax.swing.JFrame {
     private void TypeName4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeName4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TypeName4ActionPerformed
-
-    private void OpeningTime2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpeningTime2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OpeningTime2ActionPerformed
-
-    private void OpeningName3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpeningName3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OpeningName3ActionPerformed
-
-    private void OpeningTime4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpeningTime4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OpeningTime4ActionPerformed
 
     /**
      * @param args the command line arguments
