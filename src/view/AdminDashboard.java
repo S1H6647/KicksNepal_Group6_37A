@@ -1,6 +1,8 @@
 
 package view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author sanji
@@ -458,6 +460,10 @@ public class AdminDashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Search1ActionPerformed
 
+    
+    public void adminProfileBtnListener(ActionListener listener){
+        userprofile.addActionListener(listener);
+    }
     /**
      * @param args the command line arguments
      */

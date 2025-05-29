@@ -11,7 +11,8 @@ package controller;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import view.AdminDetails;
+import view.LandingScreen;
 public class AdminDetailsController {
     private final AdminDetails adminDetails;
 
