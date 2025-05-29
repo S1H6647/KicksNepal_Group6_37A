@@ -60,7 +60,7 @@ public class booknowform extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Leelawadee", 1, 24)); // NOI18N
         jLabel2.setText("Booking Duration");
 
-        jLabel3.setFont(new java.awt.Font("Leelawadee", 1, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Leelawadee UI", 3, 36)); // NOI18N
         jLabel3.setText("BOOK FUTSAL : ");
 
         jTextField3.setFont(new java.awt.Font("Leelawadee", 1, 36)); // NOI18N
@@ -99,7 +99,7 @@ public class booknowform extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(560, 560, 560)
                         .addComponent(jLabel1)))
-                .addContainerGap(263, Short.MAX_VALUE))
+                .addContainerGap(468, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,11 +116,11 @@ public class booknowform extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(126, Short.MAX_VALUE))
         );
 
         pack();
