@@ -10,10 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import model.User;
-import view.ForgotPasswordScreen;
-import view.LandingScreen;
-import view.LoginScreen;
-import view.UserDashboard;
+import view.*;
 
 /**
  *
@@ -59,17 +56,25 @@ public class LoginScreenController {
                 }
                 
                 User user = new User(email,password);
-                boolean validLogin = userDao.login(user);
-
-                if (!validLogin){
-                    JOptionPane.showMessageDialog(loginScreen, "Invalid credentials or User doesn't exist.");
+                if (user.getEmail().equals("useradmin@gmail.com") && user.getPassword().equals("useradmin")){
+                    JOptionPane.showMessageDialog(loginScreen, "Welcome to Admin Dashboard");
+                    closeScreen();
+                    AdminDashboard adminDashboard = new AdminDashboard();
+                    AdminDashboardController adminDashboardController = new AdminDashboardController(adminDashboard);
+                    adminDashboardController.openScreen();
                 }
                 else {
-                    JOptionPane.showMessageDialog(loginScreen, "Login successful.");
-                    closeScreen();
-                    UserDashboard userDashboard = new UserDashboard();
-                    UserDashboardController userDashboardController = new UserDashboardController(userDashboard);
-                    userDashboardController.openScreen();
+                    boolean validLogin = userDao.login(user);
+
+                    if (!validLogin) {
+                        JOptionPane.showMessageDialog(loginScreen, "Invalid credentials or User doesn't exist.");
+                    } else {
+                        JOptionPane.showMessageDialog(loginScreen, "Login successful.");
+                        closeScreen();
+                        UserDashboard userDashboard = new UserDashboard();
+                        UserDashboardController userDashboardController = new UserDashboardController(userDashboard);
+                        userDashboardController.openScreen();
+                    }
                 }
             }
             catch (HeadlessException he){
