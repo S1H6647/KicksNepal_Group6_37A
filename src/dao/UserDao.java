@@ -130,4 +130,24 @@ public class UserDao {
             mysql.closeConnection(connection);
         }
     }
+
+    public String getUsername(User user){
+        MySqlConnection mysql = new MySqlConnection();
+        Connection connection = mysql.openConnection();
+
+        ResultSet result = null;
+        String username = null;
+        String sql = "SELECT username FROM users WHERE email = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)){
+            pstmt.setString(1,user.getEmail());
+            result = pstmt.executeQuery();
+            while (result.next()){
+                username = result.getString("username");
+            }
+            return username;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

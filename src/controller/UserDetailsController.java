@@ -1,6 +1,8 @@
 package controller;
 
+import view.ForgotPasswordScreen;
 import view.LandingScreen;
+import view.SecurityQuestionScreen;
 import view.UserDetails;
 
 import javax.swing.*;
@@ -14,6 +16,7 @@ public class UserDetailsController {
         this.userDetails = userDetails;
 
         userDetails.logoutBtnListener(new LogoutBtnListener());
+        userDetails.changePasswordBtnListener(new ChangePasswordListener());
     }
 
     public void openScreen(){
@@ -36,6 +39,20 @@ public class UserDetailsController {
                 LandingScreen landingScreen = new LandingScreen();
                 LandingScreenController landingScreenController = new LandingScreenController(landingScreen);
                 landingScreenController.openScreen();
+            } catch (Exception e) {
+                System.out.println("Error : "+ e.getMessage());
+            }
+        }
+    }
+    
+    class ChangePasswordListener implements ActionListener{
+        @Override 
+        public void actionPerformed(ActionEvent ae){
+            try {
+                closeScreen();
+                ForgotPasswordScreen forgotPasswordScreen = new ForgotPasswordScreen();
+                ForgotPasswordController forgotPasswordController = new ForgotPasswordController(forgotPasswordScreen);
+                forgotPasswordController.openScreen();
             } catch (Exception e) {
                 System.out.println("Error : "+ e.getMessage());
             }

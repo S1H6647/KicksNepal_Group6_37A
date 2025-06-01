@@ -12,7 +12,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.AdminDetails;
+import view.ForgotPasswordScreen;
 import view.LandingScreen;
+import view.SecurityQuestionScreen;
+
 public class AdminDetailsController {
     private final AdminDetails adminDetails;
 

@@ -16,6 +16,10 @@ public class Validation {
 //    private static final String passwordRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@#$!%*?&])[A-Za-z\\d@#$!%*?&]{8,}$";
     private static final String passwordRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@#$!%*?&_-]).{8,}$";
 
+    private static final String futsalTypeRegex = "^[0-9]$";
+
+    private static final String futsalOpeningTimeRegex = "^[0-9]-[0-9]$";
+
     public boolean isValidPhoneNumber(String phoneNum){
         return phoneNum.matches(phoneRegex);
     }
@@ -26,5 +30,13 @@ public class Validation {
     
     public boolean isValidPassword(String password){
         return !password.matches(passwordRegex);
+    }
+
+    public boolean isValidFutsalType(String futsalType){
+        return futsalType.matches(futsalTypeRegex);
+    }
+
+    public boolean isValidFutsalOpeningTime(String futsalOpeningTime){
+        return futsalOpeningTime.matches(futsalOpeningTimeRegex);
     }
 }
