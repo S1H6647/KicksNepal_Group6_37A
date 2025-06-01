@@ -8,7 +8,8 @@ import dao.UserDao;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+
 import model.User;
 import view.*;
 
@@ -19,6 +20,7 @@ import view.*;
 public class LoginScreenController {
     private final UserDao userDao = new UserDao();
     private final LoginScreen loginScreen;
+    public JButton deleteBtn = new JButton("Delete");
 
     public LoginScreenController(LoginScreen loginScreen){
         this.loginScreen = loginScreen;
@@ -72,7 +74,7 @@ public class LoginScreenController {
                         JOptionPane.showMessageDialog(loginScreen, "Login successful.");
                         closeScreen();
                         UserDashboard userDashboard = new UserDashboard();
-                        UserDashboardController userDashboardController = new UserDashboardController(userDashboard);
+                        UserDashboardController userDashboardController = new UserDashboardController(userDashboard, user);
                         userDashboardController.openScreen();
                     }
                 }

@@ -45,7 +45,7 @@ public class AddFutsal extends javax.swing.JFrame {
         addBtn = new javax.swing.JButton();
         cancelBtn = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(523, 742));
         setResizable(false);
 
@@ -62,10 +62,10 @@ public class AddFutsal extends javax.swing.JFrame {
         Type1.setText("Type :");
 
         Price1.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        Price1.setText("Price :");
+        Price1.setText("Price (Rs.):");
 
         Time1.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        Time1.setText("Opening time :");
+        Time1.setText("Opening time (AM - PM):");
 
         futsalNameField.setFont(new java.awt.Font("Leelawadee", 0, 12)); // NOI18N
         futsalNameField.setForeground(new java.awt.Color(102, 102, 102));
@@ -185,7 +185,7 @@ public class AddFutsal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Body, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();

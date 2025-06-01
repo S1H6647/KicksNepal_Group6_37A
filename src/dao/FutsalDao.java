@@ -80,7 +80,26 @@ public class FutsalDao {
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        } finally {
+            mysql.closeConnection(connection);
         }
         return futsalArrayList;
+    }
+
+    public boolean removeFutsal(Futsal futsal){
+        MySqlConnection mysql = new MySqlConnection();
+        Connection connection = mysql.openConnection();
+        String sql = "DELETE FROM futsals where futsalName = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)){
+            pstmt.setString(1, futsal.getFutsalName());
+            int rowsAffected = pstmt.executeUpdate();
+
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            mysql.closeConnection(connection);
+        }
     }
 }

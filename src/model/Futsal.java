@@ -21,6 +21,10 @@ public class Futsal {
         this.futsalOpeningTime = futsalOpeningTime;
     }
 
+    public Futsal (String futsalName){
+        this.futsalName = futsalName;
+    }
+
     public String getFutsalName() {
         return futsalName;
     }
