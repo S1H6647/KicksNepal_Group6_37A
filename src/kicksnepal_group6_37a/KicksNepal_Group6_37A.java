@@ -17,6 +17,7 @@ public class KicksNepal_Group6_37A {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // Start program
         LandingScreen landingScreen = new LandingScreen();
         LandingScreenController landingController = new LandingScreenController(landingScreen);
         landingController.openScreen();
