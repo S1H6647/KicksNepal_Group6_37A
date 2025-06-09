@@ -131,11 +131,13 @@ public class AddFutsal extends javax.swing.JFrame {
         addBtn.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         addBtn.setForeground(new java.awt.Color(255, 255, 255));
         addBtn.setText("Add");
+        addBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cancelBtn.setBackground(new java.awt.Color(255, 0, 0));
         cancelBtn.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         cancelBtn.setForeground(new java.awt.Color(255, 255, 255));
         cancelBtn.setText("Cancel");
+        cancelBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout BodyLayout = new javax.swing.GroupLayout(Body);
         Body.setLayout(BodyLayout);

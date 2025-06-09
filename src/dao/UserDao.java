@@ -59,7 +59,7 @@ public class UserDao {
     public boolean login(User user){
         MySqlConnection mysql = new MySqlConnection();
         Connection connection = mysql.openConnection();
-        String sql = "SELECT * FROM users WHERE email = ? OR password = ?";
+        String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
             pstmt.setString(1, user.getEmail());

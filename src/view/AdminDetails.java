@@ -44,6 +44,7 @@ public class AdminDetails extends javax.swing.JFrame {
         tournamentCreatedNum = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1366, 768));
 
         Upper.setPreferredSize(new java.awt.Dimension(755, 154));
 

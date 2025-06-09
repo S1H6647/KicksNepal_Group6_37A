@@ -76,6 +76,7 @@ public class SecurityQuestionScreen extends javax.swing.JFrame {
         SubmitBtn.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         SubmitBtn.setForeground(new java.awt.Color(255, 255, 255));
         SubmitBtn.setText("Submit");
+        SubmitBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

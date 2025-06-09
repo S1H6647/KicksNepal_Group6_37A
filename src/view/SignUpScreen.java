@@ -37,6 +37,7 @@ public class SignUpScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setFont(new java.awt.Font("Leelawadee", 0, 12)); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(1366, 768));
 
         SignUpText.setFont(new java.awt.Font("Leelawadee", 0, 72)); // NOI18N
@@ -94,6 +95,7 @@ public class SignUpScreen extends javax.swing.JFrame {
         SignUpBtn.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         SignUpBtn.setForeground(new java.awt.Color(255, 255, 255));
         SignUpBtn.setText("SignUp");
+        SignUpBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         showPasswordBox.setText("Show password");
         showPasswordBox.addActionListener(new java.awt.event.ActionListener() {
@@ -167,6 +169,7 @@ public class SignUpScreen extends javax.swing.JFrame {
         BackBtn.setText("Back");
         BackBtn.setBorder(null);
         BackBtn.setBorderPainted(false);
+        BackBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BackBtn.setFocusPainted(false);
         BackBtn.setFocusable(false);
 

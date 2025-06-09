@@ -49,34 +49,32 @@ public class SignUpScreenController {
                 String password = new String(signUpScreen.getPasswordField().getPassword());
                 
                 if (name.equals(" Enter your name") && phoneNum.equals(" Enter your phone number") && email.equals(" Enter your email")){
-                    JOptionPane.showMessageDialog(signUpScreen, "All fields must be filled.");
+                    JOptionPane.showMessageDialog(signUpScreen, "All fields must be filled.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
                 else if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
-                    JOptionPane.showMessageDialog(signUpScreen, "All fields must be filled.");
+                    JOptionPane.showMessageDialog(signUpScreen, "All fields must be filled.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 } else if (!validation.isValidPhoneNumber(phoneNum)) {
-                    JOptionPane.showMessageDialog(signUpScreen, "Invalid Phone format.");
+                    JOptionPane.showMessageDialog(signUpScreen, "Invalid Phone format.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 } else if (validation.isValidEmail(email)) {
-                    JOptionPane.showMessageDialog(signUpScreen, "Invalid Email format.");
+                    JOptionPane.showMessageDialog(signUpScreen, "Invalid Email format.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 } else if (validation.isValidPassword(password)) {
-                    JOptionPane.showMessageDialog(signUpScreen, "Password must contain at least 1 of Uppercase letter, Lowercase letter, Special character and Number.");
+                    JOptionPane.showMessageDialog(signUpScreen, "Password must contain at least 1 of Uppercase letter, Lowercase letter, Special character and Number.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
-                
                 
                 User user = new User(name,phoneNum,email,password);
                 boolean exists = userDao.checkUser(user);
 
                 if (exists){
-                    JOptionPane.showMessageDialog(signUpScreen, "User already exists!");
+                    JOptionPane.showMessageDialog(signUpScreen, "User already exists!", "Error", JOptionPane.ERROR_MESSAGE);
                 }
                 else {
                     userDao.signup(user);
                     JOptionPane.showMessageDialog(signUpScreen, "Registration successful!");
-                    closeScreen();
                     SecurityQuestionScreen securityQuestionScreen = new SecurityQuestionScreen();
                     SecurityQuestionController securityQuestionController = new SecurityQuestionController(securityQuestionScreen);
                     securityQuestionController.openScreen();

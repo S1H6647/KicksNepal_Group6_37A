@@ -63,7 +63,7 @@ public class FutsalDao {
 
         ArrayList<Futsal> futsalArrayList = new ArrayList<>();
 
-        String sql = "SELECT futsalName, futsalLocation, futsalType, futsalPrice, futsalOpeningTime FROM futsals";
+        String sql = "SELECT * FROM futsals";
 
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
             ResultSet result = pstmt.executeQuery();
@@ -89,10 +89,10 @@ public class FutsalDao {
     public boolean removeFutsal(Futsal futsal){
         MySqlConnection mysql = new MySqlConnection();
         Connection connection = mysql.openConnection();
-        String sql = "DELETE FROM futsals where futsalName = ?";
+        String sql = "DELETE FROM futsals where futsalLocation = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
-            pstmt.setString(1, futsal.getFutsalName());
+            pstmt.setString(1, futsal.getFutsalLocation());
             int rowsAffected = pstmt.executeUpdate();
 
             return rowsAffected > 0;
@@ -100,6 +100,42 @@ public class FutsalDao {
             throw new RuntimeException(e);
         } finally {
             mysql.closeConnection(connection);
+        }
+    }
+
+    public boolean editFutsal(Futsal futsal){
+        MySqlConnection mysql = new MySqlConnection();
+        Connection connection = mysql.openConnection();
+        String sql = "UPDATE futsals SET futsalLocation = ? , futsalType = ?, futsalPrice = ?, futsalOpeningTime = ? WHERE futsalName = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)){
+            pstmt.setString(1, futsal.getFutsalLocation());
+            pstmt.setString(2, futsal.getFutsalType());
+            pstmt.setString(3, futsal.getFutsalPrice());
+            pstmt.setString(4, futsal.getFutsalOpeningTime());
+            pstmt.setString(5, futsal.getFutsalName());
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            mysql.closeConnection(connection);
+        }
+    }
+
+    public boolean bookFutsal(Futsal futsal){
+        MySqlConnection mysql = new MySqlConnection();
+        Connection connection = mysql.openConnection();
+        String sql = "UPDATE futsals SET futsalBookingDate = ?, futsalBookingDuration = ? WHERE futsalName = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)){
+            pstmt.setString(1, futsal.getFutsalBookingDate());
+            pstmt.setString(2, futsal.getFutsalBookingDuration());
+            pstmt.setString(3, futsal.getFutsalName());
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 }

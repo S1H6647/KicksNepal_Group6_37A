@@ -1,6 +1,7 @@
 
 package view;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -46,10 +47,11 @@ public class UserDashboard extends javax.swing.JFrame {
         greetings = new javax.swing.JLabel();
         Search1 = new javax.swing.JTextField();
         searchBtn = new javax.swing.JButton();
-        booking = new javax.swing.JButton();
+        currentBookingBtn = new javax.swing.JButton();
         tournamentsBtn = new javax.swing.JButton();
         userProfileBtn = new javax.swing.JButton();
         username = new javax.swing.JLabel();
+        scrollPane = new javax.swing.JScrollPane();
         Frame1 = new javax.swing.JPanel();
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -143,7 +145,6 @@ public class UserDashboard extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.SystemColor.control);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
 
         greetings.setBackground(new java.awt.Color(255, 255, 255));
@@ -157,36 +158,33 @@ public class UserDashboard extends javax.swing.JFrame {
         searchBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/magnifying-glass-solid.png"))); // NOI18N
         searchBtn.setPreferredSize(new java.awt.Dimension(131, 32));
 
-        booking.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
-        booking.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendar-days-solid.png"))); // NOI18N
-        booking.setText("Current Booking");
-        booking.setPreferredSize(new java.awt.Dimension(135, 40));
+        currentBookingBtn.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
+        currentBookingBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendar-days-solid.png"))); // NOI18N
+        currentBookingBtn.setText("Current Booking");
+        currentBookingBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        currentBookingBtn.setPreferredSize(new java.awt.Dimension(135, 40));
 
         tournamentsBtn.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
         tournamentsBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/trophy-solid.png"))); // NOI18N
         tournamentsBtn.setText("Tournaments");
+        tournamentsBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tournamentsBtn.setPreferredSize(new java.awt.Dimension(131, 36));
 
         userProfileBtn.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
         userProfileBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user-solid.png"))); // NOI18N
         userProfileBtn.setText("User Profile");
+        userProfileBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         userProfileBtn.setPreferredSize(new java.awt.Dimension(131, 36));
 
         username.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
 
-        Frame1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Frame1.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        Frame1.setName(""); // NOI18N
-        Frame1.setLayout(new java.awt.BorderLayout(10, 0));
+        Frame1.setLayout(new java.awt.GridLayout(0, 3, 10, 10));
+        scrollPane.setViewportView(Frame1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Frame1, javax.swing.GroupLayout.DEFAULT_SIZE, 1354, Short.MAX_VALUE)
-                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(greetings, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -197,12 +195,16 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(searchBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
-                .addComponent(booking, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(currentBookingBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tournamentsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(userProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(scrollPane)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,16 +213,15 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(tournamentsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(booking, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(currentBookingBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(userProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(searchBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Search1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(greetings, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(greetings, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Search1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Frame1, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
-                .addGap(15, 15, 15))
+                .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 693, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -238,10 +239,12 @@ public class UserDashboard extends javax.swing.JFrame {
     public void userProfileBtnListener(java.awt.event.ActionListener listener){
         userProfileBtn.addActionListener(listener);
     }
-    
-    public JPanel getContainerPanel() { return Frame1; }
-    
+        
     public JLabel getUsername() { return username; }
+
+    public JPanel getPanel(){ return Frame1; }
+    
+    public JButton getCurrentBookingBtn() { return currentBookingBtn; }
     
     /**
      * @param args the command line arguments
@@ -279,7 +282,7 @@ public class UserDashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Frame1;
     private javax.swing.JTextField Search1;
-    private javax.swing.JButton booking;
+    private javax.swing.JButton currentBookingBtn;
     private javax.swing.JLabel greetings;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton9;
@@ -295,6 +298,7 @@ public class UserDashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
+    private javax.swing.JScrollPane scrollPane;
     private javax.swing.JButton searchBtn;
     private javax.swing.JButton tournamentsBtn;
     private javax.swing.JButton userProfileBtn;
