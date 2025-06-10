@@ -137,7 +137,6 @@ public class AdminDashboard extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.SystemColor.control);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(1366, 768));
 
         greetings1.setBackground(new java.awt.Color(255, 255, 255));
         greetings1.setFont(new java.awt.Font("Leelawadee UI", 0, 22)); // NOI18N
@@ -158,7 +157,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         userprofile.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
         userprofile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user-solid.png"))); // NOI18N
-        userprofile.setText("Admin Profile");
+        userprofile.setText("Profile");
         userprofile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         userprofile.setPreferredSize(new java.awt.Dimension(131, 36));
 
@@ -191,9 +190,9 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(addFutsalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tournaments, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(userprofile, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tournaments, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(userprofile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()

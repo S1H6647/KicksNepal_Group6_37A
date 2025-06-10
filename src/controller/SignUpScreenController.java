@@ -74,9 +74,9 @@ public class SignUpScreenController {
                 }
                 else {
                     userDao.signup(user);
-                    JOptionPane.showMessageDialog(signUpScreen, "Registration successful!");
                     SecurityQuestionScreen securityQuestionScreen = new SecurityQuestionScreen();
-                    SecurityQuestionController securityQuestionController = new SecurityQuestionController(securityQuestionScreen);
+                    SecurityQuestionController securityQuestionController = new SecurityQuestionController(securityQuestionScreen, signUpScreen);
+                    JOptionPane.showMessageDialog(signUpScreen, "Registration successful!");
                     securityQuestionController.openScreen();
                 }
             }

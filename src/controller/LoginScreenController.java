@@ -8,11 +8,14 @@ import dao.UserDao;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 import javax.swing.*;
 
 import model.Futsal;
 import model.User;
 import view.*;
+
+import static kicksnepal_group6_37a.KicksNepal_Group6_37A.loggedInUser;
 
 /**
  *

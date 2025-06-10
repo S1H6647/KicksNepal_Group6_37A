@@ -56,6 +56,8 @@ public class Futsal {
         return futsalName;
     }
 
+    public int getFutsalID() { return futsalId; }
+
     public void setFutsalName(String futsalName) {
         this.futsalName = futsalName;
     }

@@ -28,7 +28,6 @@ public class CurrentBooking extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         MainArea = new javax.swing.JPanel();
         futsalNameText = new javax.swing.JLabel();
@@ -106,16 +105,6 @@ public class CurrentBooking extends javax.swing.JFrame {
                 .addGroup(MainAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MainAreaLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addComponent(futsalNameText)
-                        .addGap(154, 154, 154)
-                        .addComponent(futsalNameField))
-                    .addGroup(MainAreaLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(futsalLocationText)
-                        .addGap(185, 185, 185)
-                        .addComponent(futsalLocationField))
-                    .addGroup(MainAreaLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
                         .addComponent(futsalTypeLocation)
                         .addGap(215, 215, 215)
                         .addComponent(futsalTypeField))
@@ -141,17 +130,24 @@ public class CurrentBooking extends javax.swing.JFrame {
                         .addComponent(futsalBookingDurationField))
                     .addGroup(MainAreaLayout.createSequentialGroup()
                         .addGap(103, 103, 103)
-                        .addComponent(okayBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(okayBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MainAreaLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(MainAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(futsalLocationText)
+                            .addComponent(futsalNameText))
+                        .addGap(151, 151, 151)
+                        .addGroup(MainAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(futsalNameField)
+                            .addComponent(futsalLocationField))))
                 .addContainerGap(74, Short.MAX_VALUE))
         );
         MainAreaLayout.setVerticalGroup(
             MainAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainAreaLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(MainAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MainAreaLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(futsalNameText))
+                .addGap(46, 46, 46)
+                .addGroup(MainAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(futsalNameText)
                     .addComponent(futsalNameField))
                 .addGap(20, 20, 20)
                 .addGroup(MainAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,6 +203,14 @@ public class CurrentBooking extends javax.swing.JFrame {
     public JLabel getFutsalTypeField() { return futsalTypeField; }
     public JLabel getFutsalPriceField() { return futsalPriceField; }
     public JLabel getFutsalOpeningTimeField() { return futsalOpeningTimeField; }
+
+    public void setFutsalNameField(String futsalName) { this.futsalNameField.setText(futsalName); }
+    public void setFutsalLocationField(String futsalLocation) { this.futsalLocationField.setText(futsalLocation); }
+    public void setFutsalTypeField(String futsalType) { this.futsalTypeField.setText(futsalType); }
+    public void setFutsalPriceField(String futsalPrice) { this.futsalPriceField.setText(futsalPrice); }
+    public void setFutsalOpeningTimeField(String futsalOpeningTime) { this.futsalOpeningTimeField.setText(futsalOpeningTime); }
+    public void setFutsalBookingDateField(String futsalBookingDate) { this.futsalBookingDateField.setText(futsalBookingDate); }
+    public void setFutsalBookingDurationField(String futsalBookingDuration) { this.futsalBookingDurationField.setText(futsalBookingDuration); }
 
     public JButton getOkayBtn() { return okayBtn; }
     

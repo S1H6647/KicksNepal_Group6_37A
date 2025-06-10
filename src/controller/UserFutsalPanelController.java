@@ -1,6 +1,7 @@
 package controller;
 
 import model.Futsal;
+import model.User;
 import view.AdminDashboard;
 import view.BookNowScreen;
 import view.UserDashboard;
@@ -13,12 +14,14 @@ public class UserFutsalPanelController {
     private final BookNowScreen bookNowScreen = new BookNowScreen();
     private UserDashboard userDashboard;
     private Futsal futsal;
+    private final User user;
 
 
-    public UserFutsalPanelController(UserFutsalPanel userFutsalPanel, UserDashboard userDashboard, Futsal futsal){
+    public UserFutsalPanelController(UserFutsalPanel userFutsalPanel, UserDashboard userDashboard, Futsal futsal, User user){
         this.userFutsalPanel = userFutsalPanel;
         this.userDashboard = userDashboard;
         this.futsal = futsal;
+        this.user = user;
         userFutsalPanel.getBookNowBtn().addActionListener(e -> bookNowPanel());
     }
 
@@ -27,7 +30,7 @@ public class UserFutsalPanelController {
     }
 
     public void bookNowPanel() {
-        BookNowScreenController bookNowScreenController = new BookNowScreenController(bookNowScreen, userDashboard, futsal);
+        BookNowScreenController bookNowScreenController = new BookNowScreenController(bookNowScreen, userDashboard, futsal, user);
         bookNowScreenController.openScreen();
     }
 

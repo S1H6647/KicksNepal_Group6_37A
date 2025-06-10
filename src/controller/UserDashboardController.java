@@ -29,11 +29,13 @@ public class UserDashboardController {
     private final FutsalDao futsalDao = new FutsalDao();
     private final UserDao userDao = new UserDao();
     private final CurrentBooking currentBooking = new CurrentBooking();
-    private Futsal futsal;
+    private final Futsal futsal;
+    private final User user;
 
     public UserDashboardController(UserDashboard userDashboard, User user, Futsal futsal){
         this.userDashboard = userDashboard;
         this.futsal = futsal;
+        this.user = user;
 
         userDashboard.userProfileBtnListener(new UserDashboardBtnListener());
         userDashboard.getCurrentBookingBtn().addActionListener(e -> currentBookingBtn());
@@ -95,7 +97,7 @@ public class UserDashboardController {
      */
     private JPanel createFutsalPanel(Futsal futsal) {
         UserFutsalPanel newPanel = new UserFutsalPanel();
-        UserFutsalPanelController controller = new UserFutsalPanelController(newPanel, userDashboard, futsal);
+        UserFutsalPanelController controller = new UserFutsalPanelController(newPanel, userDashboard, futsal, user);
         controller.populatePanel(futsal);
         JPanel mainArea = newPanel.getMainArea();
         mainArea.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
@@ -107,9 +109,20 @@ public class UserDashboardController {
         userDashboard.getUsername().setText(userDao.getUsername(user));
     }
 
-    public void currentBookingBtn(){
-        CurrentBookingController currentBookingController = new CurrentBookingController(currentBooking, userDashboard);
-        currentBookingController.openScreen(futsal);
+    public void currentBookingBtn() {
+        try {
+            // Assume futsalId is stored or retrieved (e.g., from User or booking)
+            Futsal bookedFutsal = futsalDao.getCurrentBooking();
+            if (bookedFutsal != null) {
+                CurrentBookingController currentBookingController = new CurrentBookingController(currentBooking, userDashboard);
+                currentBookingController.populatePanel(bookedFutsal);
+                currentBookingController.openScreen(bookedFutsal);
+            } else {
+                JOptionPane.showMessageDialog(userDashboard, "No current booking found.");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(userDashboard, "Error loading booking: " + e.getMessage());
+        }
     }
 }
 

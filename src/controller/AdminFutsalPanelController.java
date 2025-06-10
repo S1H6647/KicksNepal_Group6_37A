@@ -32,7 +32,7 @@ public class AdminFutsalPanelController {
 
     public void editFutsalPanel(){
         EditFutsalBtn editFutsalBtn = new EditFutsalBtn();
-        EditFutsalBtnController editFutsalBtnController = new EditFutsalBtnController(editFutsalBtn);
+        EditFutsalBtnController editFutsalBtnController = new EditFutsalBtnController(editFutsalBtn, adminDashboard);
         editFutsalBtnController.openScreen();
     }
 

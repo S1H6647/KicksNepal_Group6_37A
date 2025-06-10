@@ -7,9 +7,12 @@ package dao;
 import database.*;
 import model.User;
 import java.sql.*;
+import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.sql.Connection;
+
+import static kicksnepal_group6_37a.KicksNepal_Group6_37A.loggedInUser;
 
 /**
  *
@@ -65,7 +68,15 @@ public class UserDao {
             pstmt.setString(1, user.getEmail());
             pstmt.setString(2, user.getPassword());
             ResultSet result = pstmt.executeQuery();
-            return result.next();
+            if (result.next()) {
+                loggedInUser.setId(result.getInt("user_id"));
+                loggedInUser.setUsername(result.getString("username"));
+                loggedInUser.setPhoneNum(result.getString("phoneNum"));
+                loggedInUser.setEmail(result.getString("email"));
+                loggedInUser.setFavFood(result.getString("favFood"));
+                loggedInUser.setFavPet(result.getString("favPet"));
+                return true;
+            }
         }
         catch (SQLException e) {
             Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE,null,e);

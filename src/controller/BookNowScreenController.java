@@ -2,6 +2,7 @@ package controller;
 
 import dao.FutsalDao;
 import model.Futsal;
+import model.User;
 import view.BookNowScreen;
 import view.UserDashboard;
 
@@ -12,11 +13,13 @@ public class BookNowScreenController {
     private final UserDashboard userDashboard;
     private final Futsal futsal;
     private final FutsalDao futsalDao = new FutsalDao();
+    private final User user;
 
-    public BookNowScreenController(BookNowScreen bookNowScreen, UserDashboard userDashboard, Futsal futsal){
+    public BookNowScreenController(BookNowScreen bookNowScreen, UserDashboard userDashboard, Futsal futsal, User user){
         this.bookNowScreen = bookNowScreen;
         this.userDashboard = userDashboard;
         this.futsal = futsal;
+        this.user = user;
 
         bookNowScreen.getBookNowBtn().addActionListener(e -> bookNowBtn());
         bookNowScreen.getCancelBtn().addActionListener(e -> cancelBtn());
@@ -39,7 +42,6 @@ public class BookNowScreenController {
         String time = bookNowScreen.getBookingDuration().getText(); // Example field
         if (date.isEmpty() || time.isEmpty()) {
             JOptionPane.showMessageDialog(bookNowScreen, "Please fill in all fields.", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
         } else {
             Futsal futsal1 = new Futsal(date, time, futsal.getFutsalName());
             boolean isValid = futsalDao.bookFutsal(futsal1);

@@ -15,7 +15,6 @@ public class CurrentBookingController {
     }
 
     public void openScreen(Futsal futsal){
-        populatePanel(futsal);
         currentBooking.setTitle("Current Booking");
         currentBooking.setLocationRelativeTo(null);
         currentBooking.setResizable(false);
@@ -27,10 +26,12 @@ public class CurrentBookingController {
     }
 
     public void populatePanel(Futsal futsal) {
-        currentBooking.getFutsalNameField().setText(futsal.getFutsalName());
-        currentBooking.getFutsalLocationField().setText(futsal.getFutsalLocation());
-        currentBooking.getFutsalTypeField().setText(futsal.getFutsalType());
-        currentBooking.getFutsalPriceField().setText(futsal.getFutsalPrice());
-        currentBooking.getFutsalOpeningTimeField().setText(futsal.getFutsalOpeningTime());
+        currentBooking.setFutsalNameField(futsal.getFutsalName());
+        currentBooking.setFutsalLocationField(futsal.getFutsalLocation());
+        currentBooking.setFutsalTypeField(futsal.getFutsalType());
+        currentBooking.setFutsalPriceField(futsal.getFutsalPrice());
+        currentBooking.setFutsalOpeningTimeField(futsal.getFutsalOpeningTime());
+        currentBooking.setFutsalBookingDateField(futsal.getFutsalBookingDate());
+        currentBooking.setFutsalBookingDurationField(futsal.getFutsalBookingDuration());
     }
 }

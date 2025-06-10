@@ -12,6 +12,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.LandingScreen;
+import view.SignUpScreen;
 
 /**
  *
@@ -21,10 +22,11 @@ public class SecurityQuestionController {
     private final UserDao userDao = new UserDao();
     private final SecurityQuestionScreen securityQuestionScreen;
     private final Validation validation = new Validation();
-    private final LandingScreen landingScreen = new LandingScreen();
-    
-    public SecurityQuestionController(SecurityQuestionScreen securityQuestionScreen){
+    private final SignUpScreen signUpScreen;
+
+    public SecurityQuestionController(SecurityQuestionScreen securityQuestionScreen, SignUpScreen signUpScreen){
         this.securityQuestionScreen = securityQuestionScreen;
+        this.signUpScreen = signUpScreen;
 
         securityQuestionScreen.addSubmitBtnListener(new SubmitBtnListener());
     }
@@ -56,6 +58,7 @@ public class SecurityQuestionController {
                 User user = new User(email, favFood, favPet);
                 boolean exists = userDao.questions(user);
                 if (exists){
+                    signUpScreen.dispose();
                     JOptionPane.showMessageDialog(securityQuestionScreen, "Security Questions successfully set!");
                     closeScreen();
                     LandingScreen landingScreen = new LandingScreen();
