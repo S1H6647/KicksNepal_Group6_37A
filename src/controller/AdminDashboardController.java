@@ -13,7 +13,6 @@ import dao.FutsalDao;
 import model.Futsal;
 import view.AddFutsal;
 import view.AdminDashboard;
-import view.AdminDetails;
 import view.AdminFutsalPanel;
 
 import javax.swing.*;
@@ -21,6 +20,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import view.LandingScreen;
 
 public class AdminDashboardController {
     private AdminDashboard adminDashboard;
@@ -28,8 +28,8 @@ public class AdminDashboardController {
 
     public AdminDashboardController(AdminDashboard adminDashboard) {
         this.adminDashboard = adminDashboard;
-
-        adminDashboard.adminProfileBtnListener(new AdminDashboardBtnListener());
+        
+        adminDashboard.logoutBtnListener(new LogoutBtnListener());
         adminDashboard.addFutsalBtnListener(new AddFutsalBtnListener());
         loadFutsalPanels();
     }
@@ -44,20 +44,21 @@ public class AdminDashboardController {
     public void closeScreen() {
         adminDashboard.dispose();
     }
-    class AdminDashboardBtnListener implements ActionListener {
+    class LogoutBtnListener implements ActionListener{
         @Override
-        public void actionPerformed(ActionEvent ae) {
+        public void actionPerformed(ActionEvent ae){
             try {
+                JOptionPane.showMessageDialog(adminDashboard, "Successfully Logged out!");
                 closeScreen();
-                AdminDetails adminDetails = new AdminDetails();
-                AdminDetailsController adminDetailsController = new AdminDetailsController(adminDetails);
-                adminDetailsController.openScreen();
+                LandingScreen landingScreen = new LandingScreen();
+                LandingScreenController landingScreenController = new LandingScreenController(landingScreen);
+                landingScreenController.openScreen();
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
             }
         }
     }
-
+    
     class AddFutsalBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent ae){

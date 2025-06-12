@@ -4,9 +4,8 @@
  */
 package view;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
+import com.toedter.calendar.JDateChooser;
+import javax.swing.*;
 
 /**
  *
@@ -32,9 +31,9 @@ public class BookNowScreen extends javax.swing.JFrame {
 
         bookNowBtn = new javax.swing.JButton();
         cancelBtn = new javax.swing.JButton();
-        bookingDateField = new javax.swing.JTextField();
         bookingDurationField = new javax.swing.JTextField();
         bookingDateText = new javax.swing.JLabel();
+        bookingDateField = new com.toedter.calendar.JDateChooser();
         bookingDurationText = new javax.swing.JLabel();
         BookFutsalTitle = new javax.swing.JLabel();
         futsalNameField = new javax.swing.JLabel();
@@ -55,13 +54,11 @@ public class BookNowScreen extends javax.swing.JFrame {
         cancelBtn.setBorderPainted(false);
         cancelBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        bookingDateField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
-
         bookingDateText.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         bookingDateText.setText("Booking Date");
 
         bookingDurationText.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        bookingDurationText.setText("Booking Duration");
+        bookingDurationText.setText("Booking Duration (1 - 3 hrs)");
 
         BookFutsalTitle.setFont(new java.awt.Font("Leelawadee", 1, 24)); // NOI18N
         BookFutsalTitle.setText("BOOK FUTSAL : ");
@@ -107,8 +104,8 @@ public class BookNowScreen extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addComponent(bookingDateText)
                 .addGap(18, 18, 18)
-                .addComponent(bookingDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(bookingDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bookingDurationText)
                 .addGap(18, 18, 18)
                 .addComponent(bookingDurationField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -124,7 +121,7 @@ public class BookNowScreen extends javax.swing.JFrame {
 
     public JLabel getFutsalNameField() { return futsalNameField; }
     
-    public JTextField getBookingDate() { return bookingDateField; }
+    public JDateChooser getBookingDate() { return bookingDateField; }
     public JTextField getBookingDuration() { return bookingDurationField; }
     
     public JButton getBookNowBtn() { return bookNowBtn; }
@@ -169,7 +166,7 @@ public class BookNowScreen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BookFutsalTitle;
     private javax.swing.JButton bookNowBtn;
-    private javax.swing.JTextField bookingDateField;
+    private com.toedter.calendar.JDateChooser bookingDateField;
     private javax.swing.JLabel bookingDateText;
     private javax.swing.JTextField bookingDurationField;
     private javax.swing.JLabel bookingDurationText;

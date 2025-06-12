@@ -13,10 +13,7 @@ import dao.FutsalDao;
 import dao.UserDao;
 import model.Futsal;
 import model.User;
-import view.CurrentBooking;
-import view.UserDashboard;
-import view.UserDetails;
-import view.UserFutsalPanel;
+import view.*;
 
 import javax.swing.*;
 
@@ -111,7 +108,6 @@ public class UserDashboardController {
 
     public void currentBookingBtn() {
         try {
-            // Assume futsalId is stored or retrieved (e.g., from User or booking)
             Futsal bookedFutsal = futsalDao.getCurrentBooking();
             if (bookedFutsal != null) {
                 CurrentBookingController currentBookingController = new CurrentBookingController(currentBooking, userDashboard);

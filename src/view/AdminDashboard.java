@@ -40,7 +40,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         greetings1 = new javax.swing.JLabel();
         addFutsalBtn = new javax.swing.JButton();
         tournaments = new javax.swing.JButton();
-        userprofile = new javax.swing.JButton();
+        logoutBtn = new javax.swing.JButton();
         Search1 = new javax.swing.JTextField();
         search2 = new javax.swing.JButton();
         scrollPane = new javax.swing.JScrollPane();
@@ -155,11 +155,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         tournaments.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tournaments.setPreferredSize(new java.awt.Dimension(131, 36));
 
-        userprofile.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
-        userprofile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user-solid.png"))); // NOI18N
-        userprofile.setText("Profile");
-        userprofile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        userprofile.setPreferredSize(new java.awt.Dimension(131, 36));
+        logoutBtn.setBackground(new java.awt.Color(255, 51, 51));
+        logoutBtn.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        logoutBtn.setText("LOG OUT");
+        logoutBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        logoutBtn.setPreferredSize(new java.awt.Dimension(128, 33));
 
         Search1.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
         Search1.setPreferredSize(new java.awt.Dimension(131, 32));
@@ -191,9 +191,9 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addComponent(addFutsalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tournaments, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(userprofile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(logoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(scrollPane)
@@ -204,7 +204,7 @@ public class AdminDashboard extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
+                        .addGap(20, 20, 20)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
@@ -214,7 +214,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(addFutsalBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(tournaments, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(userprofile, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(logoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addComponent(greetings1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -237,14 +237,13 @@ public class AdminDashboard extends javax.swing.JFrame {
     private void Search1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Search1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Search1ActionPerformed
-
-    
-    public void adminProfileBtnListener(ActionListener listener){
-        userprofile.addActionListener(listener);
-    }
     
     public void addFutsalBtnListener(ActionListener listener){
         addFutsalBtn.addActionListener(listener);
+    }
+    
+    public void logoutBtnListener(ActionListener listener){
+        logoutBtn.addActionListener(listener);
     }
     
     public JPanel getPanel(){
@@ -307,10 +306,10 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
+    private javax.swing.JButton logoutBtn;
     private javax.swing.JScrollPane scrollPane;
     private javax.swing.JButton search2;
     private javax.swing.JButton tournaments;
-    private javax.swing.JButton userprofile;
     // End of variables declaration//GEN-END:variables
 
     

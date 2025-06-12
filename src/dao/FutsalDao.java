@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Futsal;
-import model.User;
 
 import static kicksnepal_group6_37a.KicksNepal_Group6_37A.loggedInUser;
 
@@ -158,7 +157,8 @@ public class FutsalDao {
                 int rowsAffected = insertStmt.executeUpdate();
                 connection.commit();
                 return rowsAffected > 0;
-            } catch (SQLException e) {
+            }
+            catch (SQLException e) {
                 connection.rollback();
                 throw new RuntimeException("Error booking futsal: " + e.getMessage(), e);
             } finally {
@@ -171,13 +171,12 @@ public class FutsalDao {
         }
     }
 
-
     public Futsal getCurrentBooking() {
         MySqlConnection mysql = new MySqlConnection();
         Connection connection = mysql.openConnection();
         Futsal futsal = null;
 
-        String sql = "SELECT f.* FROM futsals f JOIN bookings b ON f.futsal_id = b.futsal_id " + // Changed to futsal_id
+        String sql = "SELECT * FROM futsals f JOIN bookings b ON f.futsal_id = b.futsal_id " + // Changed to futsal_id
                 "WHERE b.user_id = ? " +
                 "ORDER BY b.booking_date DESC";
 
@@ -186,15 +185,14 @@ public class FutsalDao {
             ResultSet result = pstmt.executeQuery();
 
             if (result.next()) {
-                System.out.println(result.getString("futsalName"));
                 futsal = new Futsal(
                         result.getString("futsalName"),
                         result.getString("futsalLocation"),
                         result.getString("futsalType"),
                         result.getString("futsalPrice"),
                         result.getString("futsalOpeningTime"),
-                        result.getString("futsalBookingDate"),
-                        result.getString("futsalBookingDuration")
+                        result.getString("booking_date"),
+                        result.getString("booking_duration")
                 );
             }
         } catch (SQLException e) {
@@ -223,5 +221,24 @@ public class FutsalDao {
         }finally {
             mysql.closeConnection(connection);
         }
+    }
+
+    public boolean checkBooking(Futsal futsal){
+        MySqlConnection mysql = new MySqlConnection();
+        Connection connection = mysql.openConnection();
+        String sql = "SELECT * FROM bookings WHERE user_id = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)){
+            pstmt.setInt(1,loggedInUser.getId());
+            ResultSet resultSet = pstmt.executeQuery();
+            if (resultSet.next()){
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            mysql.closeConnection(connection);
+        }
+        return false;
     }
 }

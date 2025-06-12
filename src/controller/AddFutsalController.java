@@ -5,6 +5,7 @@ import model.Futsal;
 import view.AddFutsal;
 import view.AdminDashboard;
 
+import javax.print.attribute.standard.JobMessageFromOperator;
 import javax.swing.*;
 
 /**
@@ -45,7 +46,10 @@ public class AddFutsalController {
 
             if (futsalName.isEmpty() || futsalLocation.isEmpty() || futsalType.isEmpty() || futsalPrice.isEmpty() || futsalOpeningTime.isEmpty()) {
                 JOptionPane.showMessageDialog(addFutsal, "All fields must be filled!");
-            } else {
+            } else if (Integer.parseInt(futsalPrice) < 1000){
+                JOptionPane.showMessageDialog(addFutsal, "Price can not be lower than Rs. 1000", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            else {
                 Futsal futsal = new Futsal(futsalName, futsalLocation, futsalType, futsalPrice, futsalOpeningTime);
                 boolean validFutsal = futsalDao.checkFutsal(futsal);
 
