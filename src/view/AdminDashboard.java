@@ -2,7 +2,7 @@
 package view;
 
 import java.awt.event.ActionListener;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 /**
  *
@@ -15,10 +15,9 @@ public class AdminDashboard extends javax.swing.JFrame {
      */
     public AdminDashboard() {
         initComponents();
-    }
     // </editor-fold>
        
-
+    }
  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -38,13 +37,13 @@ public class AdminDashboard extends javax.swing.JFrame {
         jTextField20 = new javax.swing.JTextField();
         jTextField21 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
-        greetings = new javax.swing.JLabel();
+        greetings1 = new javax.swing.JLabel();
         addFutsalBtn = new javax.swing.JButton();
         tournaments = new javax.swing.JButton();
-        userprofile = new javax.swing.JButton();
+        logoutBtn = new javax.swing.JButton();
         Search1 = new javax.swing.JTextField();
         search2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        scrollPane = new javax.swing.JScrollPane();
         Frame1 = new javax.swing.JPanel();
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -139,25 +138,28 @@ public class AdminDashboard extends javax.swing.JFrame {
         setBackground(java.awt.SystemColor.control);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        greetings.setBackground(new java.awt.Color(255, 255, 255));
-        greetings.setFont(new java.awt.Font("Leelawadee UI", 0, 22)); // NOI18N
-        greetings.setText("Welcome, ");
-        greetings.setPreferredSize(new java.awt.Dimension(131, 32));
+        greetings1.setBackground(new java.awt.Color(255, 255, 255));
+        greetings1.setFont(new java.awt.Font("Leelawadee UI", 0, 22)); // NOI18N
+        greetings1.setText("Welcome, Admin");
+        greetings1.setPreferredSize(new java.awt.Dimension(131, 32));
 
         addFutsalBtn.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
         addFutsalBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4115237_add_plus_icon.png"))); // NOI18N
         addFutsalBtn.setText("Add Futsal");
+        addFutsalBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         addFutsalBtn.setPreferredSize(new java.awt.Dimension(135, 40));
 
         tournaments.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
         tournaments.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/trophy-solid.png"))); // NOI18N
         tournaments.setText("Add Tournaments");
+        tournaments.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tournaments.setPreferredSize(new java.awt.Dimension(131, 36));
 
-        userprofile.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
-        userprofile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user-solid.png"))); // NOI18N
-        userprofile.setText("Admin Profile");
-        userprofile.setPreferredSize(new java.awt.Dimension(131, 36));
+        logoutBtn.setBackground(new java.awt.Color(255, 51, 51));
+        logoutBtn.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        logoutBtn.setText("LOG OUT");
+        logoutBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        logoutBtn.setPreferredSize(new java.awt.Dimension(128, 33));
 
         Search1.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
         Search1.setPreferredSize(new java.awt.Dimension(131, 32));
@@ -168,62 +170,57 @@ public class AdminDashboard extends javax.swing.JFrame {
         });
 
         search2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/magnifying-glass-solid.png"))); // NOI18N
+        search2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         search2.setPreferredSize(new java.awt.Dimension(131, 32));
 
-        jLabel1.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-
-        Frame1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Frame1.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        Frame1.setName(""); // NOI18N
-        Frame1.setLayout(new java.awt.BorderLayout(10, 0));
+        Frame1.setLayout(new java.awt.GridLayout(0, 3, 10, 10));
+        scrollPane.setViewportView(Frame1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(greetings, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(43, 43, 43)
+                .addComponent(greetings1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
                 .addComponent(Search1, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(search2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(addFutsalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+                .addComponent(addFutsalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tournaments, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tournaments, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(userprofile, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(logoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8))
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Frame1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(scrollPane)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(greetings, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(2, 2, 2)
-                                .addComponent(Search1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(search2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(addFutsalBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tournaments, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userprofile, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Frame1, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
-                .addGap(20, 20, 20))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(2, 2, 2)
+                                    .addComponent(Search1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(search2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(addFutsalBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tournaments, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(logoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(greetings1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(12, 12, 12)
+                .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 687, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -240,17 +237,21 @@ public class AdminDashboard extends javax.swing.JFrame {
     private void Search1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Search1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Search1ActionPerformed
-
-    
-    public void adminProfileBtnListener(ActionListener listener){
-        userprofile.addActionListener(listener);
-    }
     
     public void addFutsalBtnListener(ActionListener listener){
         addFutsalBtn.addActionListener(listener);
     }
     
-    public JPanel getContainerPanel() { return Frame1; }
+    public void logoutBtnListener(ActionListener listener){
+        logoutBtn.addActionListener(listener);
+    }
+    
+    public JPanel getPanel(){
+        return Frame1;
+    }
+    
+//    public JPanel getContainerPanel() { return Frame1; }
+//    public JScrollPane getContainerPanel() { return scrollPane; }
     /**
      * @param args the command line arguments
      */
@@ -290,10 +291,9 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel Frame1;
     private javax.swing.JTextField Search1;
     private javax.swing.JButton addFutsalBtn;
-    private javax.swing.JLabel greetings;
+    private javax.swing.JLabel greetings1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
@@ -306,9 +306,10 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
+    private javax.swing.JButton logoutBtn;
+    private javax.swing.JScrollPane scrollPane;
     private javax.swing.JButton search2;
     private javax.swing.JButton tournaments;
-    private javax.swing.JButton userprofile;
     // End of variables declaration//GEN-END:variables
 
     

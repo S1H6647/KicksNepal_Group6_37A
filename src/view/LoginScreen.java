@@ -57,6 +57,7 @@ public class LoginScreen extends javax.swing.JFrame {
         LoginBtn.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         LoginBtn.setForeground(new java.awt.Color(255, 255, 255));
         LoginBtn.setText("Login");
+        LoginBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         showPasswordBox.setText("Show password");
         showPasswordBox.addActionListener(new java.awt.event.ActionListener() {
@@ -70,6 +71,7 @@ public class LoginScreen extends javax.swing.JFrame {
         forgotPasswordBtn.setText("Forgot password?");
         forgotPasswordBtn.setBorder(null);
         forgotPasswordBtn.setBorderPainted(false);
+        forgotPasswordBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout SignUpFormLayout = new javax.swing.GroupLayout(SignUpForm);
         SignUpForm.setLayout(SignUpFormLayout);
@@ -128,6 +130,7 @@ public class LoginScreen extends javax.swing.JFrame {
         BackBtn.setText("Back");
         BackBtn.setBorder(null);
         BackBtn.setBorderPainted(false);
+        BackBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

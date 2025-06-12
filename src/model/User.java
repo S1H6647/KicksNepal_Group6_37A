@@ -17,6 +17,8 @@ public class User {
     private String favFood;
     private String favPet;
 
+    public User() {}
+
     //TODO: SignUp
     public User (String username, String phoneNum, String email, String password){
         this.username = username;
@@ -46,6 +48,14 @@ public class User {
         if (isForgotPassword) {
             this.password = password;
         }
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getUsername() {

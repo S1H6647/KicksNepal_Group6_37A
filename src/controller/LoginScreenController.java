@@ -8,10 +8,14 @@ import dao.UserDao;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 import javax.swing.*;
 
+import model.Futsal;
 import model.User;
 import view.*;
+
+import static kicksnepal_group6_37a.KicksNepal_Group6_37A.loggedInUser;
 
 /**
  *
@@ -20,7 +24,6 @@ import view.*;
 public class LoginScreenController {
     private final UserDao userDao = new UserDao();
     private final LoginScreen loginScreen;
-    public JButton deleteBtn = new JButton("Delete");
 
     public LoginScreenController(LoginScreen loginScreen){
         this.loginScreen = loginScreen;
@@ -49,16 +52,16 @@ public class LoginScreenController {
                 String password = new String(loginScreen.getPasswordField().getPassword());
                 
                 if (email.equals(" Enter your email")){
-                        JOptionPane.showMessageDialog(loginScreen, "Please enter your email!");
+                        JOptionPane.showMessageDialog(loginScreen, "Please enter your email!", "Error", JOptionPane.ERROR_MESSAGE);
                         return;
                     }
                 else if (email.isEmpty() || password.isEmpty()) {
-                    JOptionPane.showMessageDialog(loginScreen, "All fields must be filled.");
+                    JOptionPane.showMessageDialog(loginScreen, "All fields must be filled.", "Error", JOptionPane.ERROR_MESSAGE);
                             return;
                 }
                 
                 User user = new User(email,password);
-                if (user.getEmail().equals("useradmin@gmail.com") && user.getPassword().equals("useradmin")){
+                if (user.getEmail().equals("1") && user.getPassword().equals("1")){
                     JOptionPane.showMessageDialog(loginScreen, "Welcome to Admin Dashboard");
                     closeScreen();
                     AdminDashboard adminDashboard = new AdminDashboard();
@@ -69,12 +72,12 @@ public class LoginScreenController {
                     boolean validLogin = userDao.login(user);
 
                     if (!validLogin) {
-                        JOptionPane.showMessageDialog(loginScreen, "Invalid credentials or User doesn't exist.");
+                        JOptionPane.showMessageDialog(loginScreen, "Invalid credentials or User doesn't exist.", "Error", JOptionPane.ERROR_MESSAGE);
                     } else {
                         JOptionPane.showMessageDialog(loginScreen, "Login successful.");
                         closeScreen();
                         UserDashboard userDashboard = new UserDashboard();
-                        UserDashboardController userDashboardController = new UserDashboardController(userDashboard, user);
+                        UserDashboardController userDashboardController = new UserDashboardController(userDashboard, user, new Futsal());
                         userDashboardController.openScreen();
                     }
                 }
@@ -100,11 +103,10 @@ public class LoginScreenController {
         }
     }
     
-    class ForgotPasswordListener implements ActionListener {
+    static class ForgotPasswordListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent ae){
             try {
-                closeScreen();
                 ForgotPasswordScreen forgotPasswordScreen = new ForgotPasswordScreen();
                 ForgotPasswordController forgotPasswordController = new ForgotPasswordController(forgotPasswordScreen);
                 forgotPasswordController.openScreen();

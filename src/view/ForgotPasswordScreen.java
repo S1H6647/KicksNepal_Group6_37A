@@ -41,7 +41,7 @@ public class ForgotPasswordScreen extends javax.swing.JFrame {
         emailField = new javax.swing.JTextField();
         emailText = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         ForgotPasswordText.setFont(new java.awt.Font("Leelawadee", 0, 48)); // NOI18N
         ForgotPasswordText.setText("Forgot Password");
@@ -53,8 +53,10 @@ public class ForgotPasswordScreen extends javax.swing.JFrame {
         ConfirmBtn.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         ConfirmBtn.setForeground(new java.awt.Color(255, 255, 255));
         ConfirmBtn.setText("Confirm");
+        ConfirmBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         showPasswordBox.setText("Show password");
+        showPasswordBox.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         showPasswordBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 showPasswordBoxActionPerformed(evt);

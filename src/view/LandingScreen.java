@@ -48,11 +48,13 @@ public class LandingScreen extends javax.swing.JFrame {
         SignUpBtn.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         SignUpBtn.setForeground(new java.awt.Color(255, 255, 255));
         SignUpBtn.setText("SignUp");
+        SignUpBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LoginBtn.setBackground(new java.awt.Color(51, 51, 255));
         LoginBtn.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         LoginBtn.setForeground(new java.awt.Color(255, 255, 255));
         LoginBtn.setText("Login");
+        LoginBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout BodyLayout = new javax.swing.GroupLayout(Body);
         Body.setLayout(BodyLayout);
